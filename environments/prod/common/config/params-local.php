@@ -2,7 +2,7 @@
 
 return [
     'cookieValidationKey' => '',
-    'cookieDomain' => '.shop.dev',
-    'frontendHostInfo' => 'http://127.0.0.1:20080',
-    'backendHostInfo' => 'http://127.0.0.1:21080',
+    'cookieDomain' => '127.0.0.1',
+    'frontendHostInfo' => '127.0.0.1:20080',
+    'backendHostInfo' => '127.0.0.1:21080',
 ];
