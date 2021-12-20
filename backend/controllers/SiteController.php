@@ -1,20 +1,27 @@
 <?php
-
 namespace backend\controllers;
 
 use common\forms\LoginForm;
+use common\services\AuthService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
-use yii\web\Response;
 
 /**
  * Site controller
  */
 class SiteController extends Controller
 {
+    private $authService;
+
+    public function __construct($id, $module, AuthService $authService, $config = [])
+    {
+        parent::__construct($id, $module, $config);
+        $this->authService = $authService;
+    }
+
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function behaviors()
     {
@@ -29,7 +36,7 @@ class SiteController extends Controller
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function actions()
     {
@@ -53,7 +60,7 @@ class SiteController extends Controller
     /**
      * Login action.
      *
-     * @return string|Response
+     * @return string
      */
     public function actionLogin()
     {
@@ -63,22 +70,26 @@ class SiteController extends Controller
 
         $this->layout = 'main-login';
 
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+        $form = new LoginForm();
+        if ($form->load(Yii::$app->request->post()) && $form->validate()) {
+            try {
+                $user = $this->authService->auth($form);
+                Yii::$app->user->login($user, $form->rememberMe ? 3600 * 24 * 30 : 0);
+                return $this->goBack();
+            } catch (\DomainException $e) {
+                Yii::$app->session->setFlash('error', $e->getMessage());
+            }
         }
 
-        $model->password = '';
-
         return $this->render('login', [
-            'model' => $model,
+            'model' => $form,
         ]);
     }
 
     /**
      * Logout action.
      *
-     * @return Response
+     * @return string
      */
     public function actionLogout()
     {
