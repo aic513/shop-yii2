@@ -1,9 +1,9 @@
 <?php
 
-namespace frontend\tests\unit\models;
+namespace frontend\tests\unit\forms;
 
 use common\fixtures\UserFixture;
-use frontend\models\VerifyEmailForm;
+use frontend\forms\VerifyEmailForm;
 
 class VerifyEmailFormTest extends \Codeception\Test\Unit
 {
