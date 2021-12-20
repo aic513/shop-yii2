@@ -1,15 +1,15 @@
 <?php
 namespace frontend\controllers;
 
-use common\forms\LoginForm;
-use common\services\AuthService;
-use frontend\forms\ContactForm;
-use frontend\forms\PasswordResetRequestForm;
-use frontend\forms\ResetPasswordForm;
-use frontend\forms\SignupForm;
-use frontend\services\auth\PasswordResetService;
-use frontend\services\auth\SignupService;
-use frontend\services\contact\ContactService;
+use shop\forms\auth\LoginForm;
+use shop\forms\auth\PasswordResetRequestForm;
+use shop\forms\auth\ResetPasswordForm;
+use shop\forms\auth\SignupForm;
+use shop\forms\ContactForm;
+use shop\services\auth\AuthService;
+use shop\services\auth\PasswordResetService;
+use shop\services\auth\SignupService;
+use shop\services\contact\ContactService;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
