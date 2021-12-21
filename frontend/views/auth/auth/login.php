@@ -1,12 +1,12 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $form yii\bootstrap4\ActiveForm */
+/* @var $form yii\bootstrap\ActiveForm */
 
 /* @var $model \shop\forms\auth\LoginForm */
 
-use yii\bootstrap4\ActiveForm;
-use yii\bootstrap4\Html;
+use yii\bootstrap\ActiveForm;
+use yii\helpers\Html;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
@@ -27,9 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
             <div style="color:#999;margin:1em 0">
-                If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
-                <br>
-                Need new verification email? <?= Html::a('Resend', ['site/resend-verification-email']) ?>
+                If you forgot your password you can <?= Html::a('reset it', ['auth/reset/request']) ?>.
             </div>
 
             <div class="form-group">
