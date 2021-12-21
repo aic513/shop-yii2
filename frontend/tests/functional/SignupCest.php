@@ -48,7 +48,7 @@ class SignupCest
         $I->seeRecord('common\entities\User', [
             'username' => 'tester',
             'email' => 'tester.email@example.com',
-            'status' => \shop\entities\User::STATUS_WAIT
+            'status' => \shop\entities\User\User::STATUS_WAIT
         ]);
 
         $I->seeEmailIsSent();

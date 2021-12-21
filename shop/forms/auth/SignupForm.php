@@ -2,7 +2,7 @@
 
 namespace shop\forms\auth;
 
-use common\entities\User;
+use shop\entities\User\User;
 use Yii;
 use yii\base\Model;
 

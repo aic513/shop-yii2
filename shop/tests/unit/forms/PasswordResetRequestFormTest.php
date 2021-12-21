@@ -3,7 +3,7 @@
 namespace shop\tests\unit\forms;
 
 use common\fixtures\UserFixture as UserFixture;
-use shop\entities\User;
+use shop\entities\User\User;
 use shop\forms\auth\PasswordResetRequestForm;
 
 class PasswordResetRequestFormTest extends \Codeception\Test\Unit
