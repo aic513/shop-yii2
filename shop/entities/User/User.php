@@ -266,4 +266,11 @@ class User extends ActiveRecord implements IdentityInterface
         $networks[] = Network::create($network, $identity);
         $this->networks = $networks;
     }
+
+    public function edit(string $username, string $email): void
+    {
+        $this->username = $username;
+        $this->email = $email;
+        $this->updated_at = time();
+    }
 }
