@@ -18,8 +18,8 @@ if required_plugins_installed
 end
 
 domains = {
-  frontend: 'y2aa-frontend.test',
-  backend:  'y2aa-backend.test'
+  frontend: 'frontend.shop.test',
+  backend:  'backend.shop.test'
 }
 
 config = {
@@ -77,6 +77,7 @@ Vagrant.configure(2) do |config|
   config.hostmanager.ignore_private_ip  = false
   config.hostmanager.include_offline    = true
   config.hostmanager.aliases            = domains.values
+  config.vbguest.auto_update = false
 
   # provisioners
   config.vm.provision 'shell', path: './vagrant/provision/once-as-root.sh', args: [options['timezone'], options['ip']]

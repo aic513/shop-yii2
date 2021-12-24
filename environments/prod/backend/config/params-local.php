@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'cookieValidationKey' => '',
-    'cookieDomain' => '127.0.0.1',
+	'cookieValidationKey' => '',
+	'cookieDomain' => '.test',
 ];
