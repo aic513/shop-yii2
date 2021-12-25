@@ -1,20 +1,20 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "0df2a5055bbac3c6293a8763992da725",
-    "packages": [
-        {
-            "name": "almasaeed2010/adminlte",
-            "version": "v2.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ColorlibHQ/AdminLTE.git",
-                "reference": "86990d5b48f5b9d747ee14d67df7bb200ffc6f85"
-            },
-            "dist": {
+	"_readme": [
+		"This file locks the dependencies of your project to a known state",
+		"Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+		"This file is @generated automatically"
+	],
+	"content-hash": "122c47236cb8809aabd4accdf38b6513",
+	"packages": [
+		{
+			"name": "almasaeed2010/adminlte",
+			"version": "v2.x-dev",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/ColorlibHQ/AdminLTE.git",
+				"reference": "86990d5b48f5b9d747ee14d67df7bb200ffc6f85"
+			},
+			"dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/ColorlibHQ/AdminLTE/zipball/86990d5b48f5b9d747ee14d67df7bb200ffc6f85",
                 "reference": "86990d5b48f5b9d747ee14d67df7bb200ffc6f85",
@@ -57,9 +57,9 @@
             "name": "bower-asset/bootstrap",
             "version": "v3.4.1",
             "source": {
-                "type": "git",
-                "url": "git@github.com:twbs/bootstrap.git",
-                "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
+	            "type": "git",
+	            "url": "https://github.com/twbs/bootstrap.git",
+	            "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
             },
             "dist": {
                 "type": "zip",
@@ -470,25 +470,22 @@
             ],
             "time": "2021-11-20T21:34:12+00:00"
         },
-        {
-            "name": "ezyang/htmlpurifier",
-            "version": "v4.13.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ezyang/htmlpurifier.git",
-                "reference": "08e27c97e4c6ed02f37c5b2b20488046c8d90d75"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/08e27c97e4c6ed02f37c5b2b20488046c8d90d75",
-                "reference": "08e27c97e4c6ed02f37c5b2b20488046c8d90d75",
-                "shasum": ""
-            },
+		{
+			"name": "ezyang/htmlpurifier",
+			"version": "v4.14.0",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/ezyang/htmlpurifier.git",
+				"reference": "12ab42bd6e742c70c0a52f7b82477fcd44e64b75"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/12ab42bd6e742c70c0a52f7b82477fcd44e64b75",
+				"reference": "12ab42bd6e742c70c0a52f7b82477fcd44e64b75",
+				"shasum": ""
+			},
             "require": {
                 "php": ">=5.2"
-            },
-            "require-dev": {
-                "simpletest/simpletest": "dev-master#72de02a7b80c6bb8864ef9bf66d41d2f58f826bd"
             },
             "type": "library",
             "autoload": {
@@ -520,9 +517,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ezyang/htmlpurifier/issues",
-                "source": "https://github.com/ezyang/htmlpurifier/tree/master"
+	            "source": "https://github.com/ezyang/htmlpurifier/tree/v4.14.0"
             },
-            "time": "2020-06-29T00:56:53+00:00"
+			"time": "2021-12-25T01:21:49+00:00"
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
@@ -826,13 +823,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-krajee-base.git",
-                "reference": "58105219f14665e874223de6a429ad4bc5403fb8"
+	            "reference": "c7bdb54380a7cbeedcd4520b8e27a58e76fda0a6"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/58105219f14665e874223de6a429ad4bc5403fb8",
-                "reference": "58105219f14665e874223de6a429ad4bc5403fb8",
-                "shasum": ""
+	            "type": "zip",
+	            "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/c7bdb54380a7cbeedcd4520b8e27a58e76fda0a6",
+	            "reference": "c7bdb54380a7cbeedcd4520b8e27a58e76fda0a6",
+	            "shasum": ""
             },
             "suggest": {
                 "yiisoft/yii2-bootstrap": "for Krajee extensions to work with Bootstrap 3.x version",
@@ -875,7 +872,7 @@
                 "issues": "https://github.com/kartik-v/yii2-krajee-base/issues",
                 "source": "https://github.com/kartik-v/yii2-krajee-base/tree/master"
             },
-            "time": "2021-11-09T03:06:09+00:00"
+	        "time": "2021-12-24T18:25:51+00:00"
         },
         {
             "name": "kartik-v/yii2-widget-activeform",
@@ -2138,26 +2135,79 @@
                 "csprng",
                 "polyfill",
                 "pseudorandom",
-                "random"
+	            "random"
             ],
-            "support": {
-                "email": "info@paragonie.com",
-                "issues": "https://github.com/paragonie/random_compat/issues",
-                "source": "https://github.com/paragonie/random_compat"
-            },
-            "time": "2021-10-04T08:39:19+00:00"
+	        "support": {
+		        "email": "info@paragonie.com",
+		        "issues": "https://github.com/paragonie/random_compat/issues",
+		        "source": "https://github.com/paragonie/random_compat"
+	        },
+	        "time": "2021-10-04T08:39:19+00:00"
         },
-        {
-            "name": "rmrevin/yii2-fontawesome",
-            "version": "3.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rmrevin/yii2-fontawesome.git",
-                "reference": "a1b448cef7e03a0b5a6286276bef004efa83f323"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/a1b448cef7e03a0b5a6286276bef004efa83f323",
+		{
+			"name": "paulzi/yii2-nested-sets",
+			"version": "v1.1.0",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/paulzi/yii2-nested-sets.git",
+				"reference": "05b51d129295e10becf603777aa25cf555329f46"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/paulzi/yii2-nested-sets/zipball/05b51d129295e10becf603777aa25cf555329f46",
+				"reference": "05b51d129295e10becf603777aa25cf555329f46",
+				"shasum": ""
+			},
+			"require": {
+				"php": ">=5.4.0",
+				"yiisoft/yii2": "~2.0.0"
+			},
+			"require-dev": {
+				"phpunit/dbunit": "~1.0",
+				"phpunit/phpunit": "~4.0"
+			},
+			"type": "yii2-extension",
+			"autoload": {
+				"psr-4": {
+					"paulzi\\nestedsets\\": ""
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "Alexander Kochetov",
+					"email": "creocoder@gmail.com"
+				},
+				{
+					"name": "PaulZi",
+					"email": "pavel.zimakoff@gmail.com"
+				}
+			],
+			"description": "Nested Sets Behavior for Yii2",
+			"keywords": [
+				"nested sets",
+				"yii2"
+			],
+			"support": {
+				"issues": "https://github.com/paulzi/yii2-nested-sets/issues?state=open",
+				"source": "https://github.com/paulzi/yii2-nested-sets"
+			},
+			"time": "2018-07-31T13:38:08+00:00"
+		},
+		{
+			"name": "rmrevin/yii2-fontawesome",
+			"version": "3.x-dev",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/rmrevin/yii2-fontawesome.git",
+				"reference": "a1b448cef7e03a0b5a6286276bef004efa83f323"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/a1b448cef7e03a0b5a6286276bef004efa83f323",
                 "reference": "a1b448cef7e03a0b5a6286276bef004efa83f323",
                 "shasum": ""
             },
@@ -2902,13 +2952,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "2d9bee8d1635338582869a464665ef3ab10ecb97"
+	            "reference": "46da165f78e5d69f6f05546368385fb25e51dc12"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/2d9bee8d1635338582869a464665ef3ab10ecb97",
-                "reference": "2d9bee8d1635338582869a464665ef3ab10ecb97",
-                "shasum": ""
+	            "type": "zip",
+	            "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/46da165f78e5d69f6f05546368385fb25e51dc12",
+	            "reference": "46da165f78e5d69f6f05546368385fb25e51dc12",
+	            "shasum": ""
             },
             "require": {
                 "bower-asset/inputmask": "~3.2.2 | ~3.3.5",
@@ -3017,7 +3067,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-21T21:57:30+00:00"
+	        "time": "2021-12-23T11:35:50+00:00"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -4200,13 +4250,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "fafead601df92bbd7fd9318ceb8c96af2cf79612"
+	            "reference": "d3bb6d423f167bdbc50e6d956142895375d49505"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/fafead601df92bbd7fd9318ceb8c96af2cf79612",
-                "reference": "fafead601df92bbd7fd9318ceb8c96af2cf79612",
-                "shasum": ""
+	            "type": "zip",
+	            "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/d3bb6d423f167bdbc50e6d956142895375d49505",
+	            "reference": "d3bb6d423f167bdbc50e6d956142895375d49505",
+	            "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0",
@@ -4258,7 +4308,7 @@
                 "issues": "https://github.com/FakerPHP/Faker/issues",
                 "source": "https://github.com/FakerPHP/Faker/tree/main"
             },
-            "time": "2021-12-21T20:31:55+00:00"
+	        "time": "2021-12-23T17:34:47+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -4392,9 +4442,6 @@
             },
             "require": {
                 "php": "^7.1 || ^8.0"
-            },
-            "replace": {
-                "myclabs/deep-copy": "self.version"
             },
             "require-dev": {
                 "doctrine/collections": "^1.0",
@@ -5188,13 +5235,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b2e17d6bd9bea7dddff05126c8bc5f39e18089c7"
+	            "reference": "ddd05b9d844260353895a3b950a9258126c11503"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b2e17d6bd9bea7dddff05126c8bc5f39e18089c7",
-                "reference": "b2e17d6bd9bea7dddff05126c8bc5f39e18089c7",
-                "shasum": ""
+	            "type": "zip",
+	            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ddd05b9d844260353895a3b950a9258126c11503",
+	            "reference": "ddd05b9d844260353895a3b950a9258126c11503",
+	            "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.3.1",
@@ -5265,7 +5312,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/8.5"
+	            "source": "https://github.com/sebastianbergmann/phpunit/tree/8.5.22"
             },
             "funding": [
                 {
@@ -5277,7 +5324,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-17T05:40:28+00:00"
+	        "time": "2021-12-25T06:58:09+00:00"
         },
         {
             "name": "psr/container",
@@ -7652,5 +7699,5 @@
         "php": ">=5.6.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+	"plugin-api-version": "2.2.0"
 }
