@@ -26,15 +26,22 @@
         </form>
         <!-- /.search form -->
 
-        <?= dmstr\widgets\Menu::widget(
-            [
-                'options' => ['class' => 'sidebar-menu tree', 'data-widget' => 'tree'],
-                'items' => [
-                    ['label' => 'Management', 'options' => ['class' => 'header']],
-                    ['label' => 'Users', 'icon' => 'user', 'url' => ['/user/index'], 'active' => $this->context->id == 'user/index'],
-                ],
-            ]
-        ) ?>
+	    <?= dmstr\widgets\Menu::widget(
+		    [
+			    'options' => ['class' => 'sidebar-menu tree', 'data-widget' => 'tree'],
+			    'items' => [
+				    ['label' => 'Management', 'options' => ['class' => 'header']],
+				    [
+					    'label' => 'Shop',
+					    'icon' => 'folder',
+					    'items' => [
+						    ['label' => 'Brands', 'icon' => 'file-o', 'url' => ['/shop/brand/index'], 'active' => $this->context->id == 'shop/brand'],
+					    ]
+				    ],
+				    ['label' => 'Users', 'icon' => 'user', 'url' => ['/user/index'], 'active' => $this->context->id == 'user/index'],
+			    ],
+		    ]
+	    ) ?>
 
     </section>
 
