@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'attribute' => 'name',
                         'value' => function (Category $model) {
                             $indent = ($model->depth > 1 ? str_repeat('&nbsp;&nbsp;', $model->depth - 1) . ' ' : '');
-            
+    
                             return $indent . Html::a(Html::encode($model->name), ['view', 'id' => $model->id]);
                         },
                         'format' => 'raw',
