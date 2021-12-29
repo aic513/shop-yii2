@@ -7,6 +7,7 @@ use shop\entities\Shop\Product\Product;
 use shop\entities\Shop\Tag;
 use shop\forms\manage\Shop\Product\ModificationForm;
 use shop\forms\manage\Shop\Product\PhotosForm;
+use shop\forms\manage\Shop\Product\PriceForm;
 use shop\forms\manage\Shop\Product\ProductCreateForm;
 use shop\forms\manage\Shop\Product\ProductEditForm;
 use shop\repositories\Shop\BrandRepository;
@@ -130,7 +131,7 @@ class ProductManageService
             $tag = $this->tags->get($tagId);
             $product->assignTag($tag->id);
         }
-        
+    
         $this->transaction->wrap(function () use ($product, $form) {
             foreach ($form->tags->newNames as $tagName) {
                 if (!$tag = $this->tags->findByName($tagName)) {
@@ -141,6 +142,13 @@ class ProductManageService
             }
             $this->products->save($product);
         });
+    }
+    
+    public function changePrice($id, PriceForm $form): void
+    {
+        $product = $this->products->get($id);
+        $product->setPrice($form->new, $form->old);
+        $this->products->save($product);
     }
     
     public function addPhotos($id, PhotosForm $form): void
