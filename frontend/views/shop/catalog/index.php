@@ -10,23 +10,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <h1><?= Html::encode($this->title) ?></h1>
 
-<div class="row">
-    <div class="col-sm-2"><img src="http://static.shop.dev/cache/products/compaq_presario-80x80.jpg" alt="Desktops" title="Desktops" class="img-thumbnail"/>
-    </div>
-    <div class="col-sm-10"><p>
-            Example of category description text</p>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <a href="/index.php?route=product/category&amp;path=20_26">PC (0)</a> | <a href="/index.php?route=product/category&amp;path=20_27">Mac (1)</a>
     </div>
 </div>
-<hr>
-<h3>Refine Search</h3>
-<div class="row">
-    <div class="col-sm-3">
-        <ul>
-            <li><a href="/index.php?route=product/category&amp;path=20_26">PC (0)</a></li>
-            <li><a href="/index.php?route=product/category&amp;path=20_27">Mac (1)</a></li>
-        </ul>
-    </div>
-</div>
+
 <div class="row">
     <div class="col-md-2 col-sm-6 hidden-xs">
         <div class="btn-group btn-group-sm">
@@ -72,7 +61,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=42"><img
-                            src="http://static.shop.dev/cache/products/apple_cinema_30-228x228.jpg" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"
+                            src="http://static.shop.test/cache/products/apple_cinema_30-228x228.jpg" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"
                             class="img-responsive"/></a></div>
             <div>
                 <div class="caption">
@@ -97,7 +86,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=30"><img
-                            src="http://static.shop.dev/cache/products/canon_eos_5d_1-228x228.jpg" alt="Canon EOS 5D" title="Canon EOS 5D"
+                            src="http://static.shop.test/cache/products/canon_eos_5d_1-228x228.jpg" alt="Canon EOS 5D" title="Canon EOS 5D"
                             class="img-responsive"/></a></div>
             <div>
                 <div class="caption">
@@ -122,7 +111,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=47"><img
-                            src="http://static.shop.dev/cache/products/hp_1-228x228.jpg" alt="HP LP3065" title="HP LP3065" class="img-responsive"/></a></div>
+                            src="http://static.shop.test/cache/products/hp_1-228x228.jpg" alt="HP LP3065" title="HP LP3065" class="img-responsive"/></a></div>
             <div>
                 <div class="caption">
                     <h4><a href="/index.php?route=product/product&amp;path=20&amp;product_id=47">HP LP3065</a></h4>
@@ -145,7 +134,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=28"><img
-                            src="http://static.shop.dev/cache/products/htc_touch_hd_1-228x228.jpg" alt="HTC Touch HD" title="HTC Touch HD"
+                            src="http://static.shop.test/cache/products/htc_touch_hd_1-228x228.jpg" alt="HTC Touch HD" title="HTC Touch HD"
                             class="img-responsive"/></a></div>
             <div>
                 <div class="caption">
@@ -169,7 +158,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=40"><img
-                            src="http://static.shop.dev/cache/products/iphone_1-228x228.jpg" alt="iPhone" title="iPhone" class="img-responsive"/></a></div>
+                            src="http://static.shop.test/cache/products/iphone_1-228x228.jpg" alt="iPhone" title="iPhone" class="img-responsive"/></a></div>
             <div>
                 <div class="caption">
                     <h4><a href="/index.php?route=product/product&amp;path=20&amp;product_id=40">iPhone</a></h4>
@@ -192,7 +181,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=48"><img
-                            src="http://static.shop.dev/cache/products/ipod_classic_1-228x228.jpg" alt="iPod Classic" title="iPod Classic"
+                            src="http://static.shop.test/cache/products/ipod_classic_1-228x228.jpg" alt="iPod Classic" title="iPod Classic"
                             class="img-responsive"/></a></div>
             <div>
                 <div class="caption">
@@ -220,7 +209,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=43"><img
-                            src="http://static.shop.dev/cache/products/macbook_1-228x228.jpg" alt="MacBook" title="MacBook" class="img-responsive"/></a></div>
+                            src="http://static.shop.test/cache/products/macbook_1-228x228.jpg" alt="MacBook" title="MacBook" class="img-responsive"/></a></div>
             <div>
                 <div class="caption">
                     <h4><a href="/index.php?route=product/product&amp;path=20&amp;product_id=43">MacBook</a></h4>
@@ -246,7 +235,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=44"><img
-                            src="http://static.shop.dev/cache/products/macbook_air_1-228x228.jpg" alt="MacBook Air" title="MacBook Air" class="img-responsive"/></a>
+                            src="http://static.shop.test/cache/products/macbook_air_1-228x228.jpg" alt="MacBook Air" title="MacBook Air"
+                            class="img-responsive"/></a>
             </div>
             <div>
                 <div class="caption">
@@ -270,7 +260,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=29"><img
-                            src="http://static.shop.dev/cache/products/palm_treo_pro_1-228x228.jpg" alt="Palm Treo Pro" title="Palm Treo Pro"
+                            src="http://static.shop.test/cache/products/palm_treo_pro_1-228x228.jpg" alt="Palm Treo Pro" title="Palm Treo Pro"
                             class="img-responsive"/></a></div>
             <div>
                 <div class="caption">
@@ -294,7 +284,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=33"><img
-                            src="http://static.shop.dev/cache/products/samsung_syncmaster_941bw-228x228.jpg" alt="Samsung SyncMaster 941BW"
+                            src="http://static.shop.test/cache/products/samsung_syncmaster_941bw-228x228.jpg" alt="Samsung SyncMaster 941BW"
                             title="Samsung SyncMaster 941BW" class="img-responsive"/></a></div>
             <div>
                 <div class="caption">
@@ -318,7 +308,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="product-layout product-list col-xs-12">
         <div class="product-thumb">
             <div class="image"><a href="/index.php?route=product/product&amp;path=20&amp;product_id=46"><img
-                            src="http://static.shop.dev/cache/products/sony_vaio_1-228x228.jpg" alt="Sony VAIO" title="Sony VAIO" class="img-responsive"/></a>
+                            src="http://static.shop.test/cache/products/sony_vaio_1-228x228.jpg" alt="Sony VAIO" title="Sony VAIO" class="img-responsive"/></a>
             </div>
             <div>
                 <div class="caption">
