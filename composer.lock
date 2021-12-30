@@ -4,7 +4,7 @@
 		"Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
 		"This file is @generated automatically"
 	],
-	"content-hash": "32c58e559de26e896c4775e5d785153d",
+	"content-hash": "58b0a93a876a8a30bffa39bb55f224a4",
 	"packages": [
 		{
 			"name": "almasaeed2010/adminlte",
@@ -25,16 +25,16 @@
 			},
 			"type": "template",
 			"notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Abdullah Almsaeed",
-                    "email": "abdullah@almsaeedstudio.com"
-                }
-            ],
-            "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 3",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "Abdullah Almsaeed",
+					"email": "abdullah@almsaeedstudio.com"
+				}
+			],
+			"description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 3",
             "homepage": "https://adminlte.io/",
             "keywords": [
                 "JS",
@@ -66,25 +66,45 @@
                 "url": "https://api.github.com/repos/twbs/bootstrap/zipball/68b0d231a13201eb14acd3dc84e51543d16e5f7e",
                 "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
             },
-            "require": {
-                "bower-asset/jquery": ">=1.9.1,<4.0"
-            },
-            "type": "bower-asset",
-            "license": [
-                "MIT"
-            ]
+	        "require": {
+		        "bower-asset/jquery": ">=1.9.1,<4.0"
+	        },
+	        "type": "bower-asset",
+	        "license": [
+		        "MIT"
+	        ]
         },
-        {
-            "name": "bower-asset/inputmask",
-            "version": "3.3.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
-                "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/5e670ad62f50c738388d4dcec78d2888505ad77b",
+		{
+			"name": "bower-asset/font-awesome",
+			"version": "v4.7.0",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/FortAwesome/Font-Awesome.git",
+				"reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/a8386aae19e200ddb0f6845b5feeee5eb7013687",
+				"reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687"
+			},
+			"type": "bower-asset",
+			"license": [
+				"OFL-1.1",
+				"MIT",
+				"CC-BY-3.0"
+			]
+		},
+		{
+			"name": "bower-asset/inputmask",
+			"version": "3.3.11",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/RobinHerbots/Inputmask.git",
+				"reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/5e670ad62f50c738388d4dcec78d2888505ad77b",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "require": {
@@ -452,16 +472,16 @@
             "description": "A library for validating emails against several RFCs",
             "homepage": "https://github.com/egulias/EmailValidator",
             "keywords": [
-                "email",
-                "emailvalidation",
-                "emailvalidator",
-                "validation",
-                "validator"
+	            "email",
+	            "emailvalidation",
+	            "emailvalidator",
+	            "validation",
+	            "validator"
             ],
-            "support": {
-                "issues": "https://github.com/egulias/EmailValidator/issues",
-	            "source": "https://github.com/egulias/EmailValidator/tree/3.x"
-            },
+	        "support": {
+		        "issues": "https://github.com/egulias/EmailValidator/issues",
+		        "source": "https://github.com/egulias/EmailValidator/tree/3.x"
+	        },
 	        "funding": [
 		        {
 			        "url": "https://github.com/egulias",
@@ -494,16 +514,16 @@
 				},
 				"files": [
 					"library/HTMLPurifier.composer.php"
-                ],
-                "exclude-from-classmap": [
-                    "/library/HTMLPurifier/Language/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1-or-later"
-            ],
-            "authors": [
+				],
+				"exclude-from-classmap": [
+					"/library/HTMLPurifier/Language/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"LGPL-2.1-or-later"
+			],
+			"authors": [
                 {
                     "name": "Edward Z. Yang",
                     "email": "admin@htmlpurifier.org",
@@ -2061,13 +2081,13 @@
             ],
             "description": "Validate and save automatically related Active Record models.",
             "keywords": [
-                "Behavior",
-                "active-query",
-                "active-record",
-                "database",
-                "extension",
-                "has-many",
-                "has-one",
+	            "Behavior",
+	            "active-query",
+	            "active-record",
+	            "database",
+	            "extension",
+	            "has-many",
+	            "has-one",
 	            "relations",
 	            "yii2"
             ],
@@ -2140,16 +2160,16 @@
 			"license": [
 				"MIT"
 			]
-        },
-        {
-            "name": "paragonie/random_compat",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "cba4096b51f5e588ee60cf7fbf3bf02a13ef0439"
-            },
-            "dist": {
+		},
+		{
+			"name": "paragonie/random_compat",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/paragonie/random_compat.git",
+				"reference": "cba4096b51f5e588ee60cf7fbf3bf02a13ef0439"
+			},
+			"dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/paragonie/random_compat/zipball/cba4096b51f5e588ee60cf7fbf3bf02a13ef0439",
                 "reference": "cba4096b51f5e588ee60cf7fbf3bf02a13ef0439",
@@ -2172,30 +2192,30 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Paragon Initiative Enterprises",
-                    "email": "security@paragonie.com",
-	                "homepage": "https://paragonie.com"
-                }
-            ],
-	        "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
-	        "keywords": [
-		        "csprng",
-		        "polyfill",
-		        "pseudorandom",
-		        "random"
-	        ],
-	        "support": {
-		        "email": "info@paragonie.com",
-		        "issues": "https://github.com/paragonie/random_compat/issues",
-		        "source": "https://github.com/paragonie/random_compat"
-	        },
-	        "time": "2021-10-04T08:39:19+00:00"
-        },
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "Paragon Initiative Enterprises",
+					"email": "security@paragonie.com",
+					"homepage": "https://paragonie.com"
+				}
+			],
+			"description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+			"keywords": [
+				"csprng",
+				"polyfill",
+				"pseudorandom",
+				"random"
+			],
+			"support": {
+				"email": "info@paragonie.com",
+				"issues": "https://github.com/paragonie/random_compat/issues",
+				"source": "https://github.com/paragonie/random_compat"
+			},
+			"time": "2021-10-04T08:39:19+00:00"
+		},
 		{
 			"name": "paulzi/yii2-nested-sets",
 			"version": "v1.1.0",
@@ -2270,16 +2290,16 @@
 			"require-dev": {
 				"doctrine/instantiator": "1.0.*",
 				"phpdocumentor/reflection-docblock": "~3.1.0",
-                "phpunit/phpunit": "^4.8"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "asset-installer-paths": {
-                    "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor/bower"
-                }
-            },
-            "autoload": {
+				"phpunit/phpunit": "^4.8"
+			},
+			"type": "yii2-extension",
+			"extra": {
+				"asset-installer-paths": {
+					"npm-asset-library": "vendor/npm",
+					"bower-asset-library": "vendor/bower"
+				}
+			},
+			"autoload": {
                 "psr-4": {
                     "rmrevin\\yii\\fontawesome\\": ""
                 }
@@ -2982,16 +3002,16 @@
             ],
             "authors": [
                 {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
+	                "name": "Bernhard Schussek",
+	                "email": "bschussek@gmail.com"
                 }
             ],
-            "description": "Assertions to validate method input/output with nice error messages.",
-            "keywords": [
-                "assert",
-	            "check",
-	            "validate"
-            ],
+	        "description": "Assertions to validate method input/output with nice error messages.",
+	        "keywords": [
+		        "assert",
+		        "check",
+		        "validate"
+	        ],
 	        "support": {
 		        "issues": "https://github.com/webmozarts/assert/issues",
 		        "source": "https://github.com/webmozarts/assert/tree/master"
@@ -3057,24 +3077,24 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/yiisoft/yii2-framework.git",
-				"reference": "7188953937a7aacd1cbc8839d052c8435c4c2460"
+				"reference": "1b220f42a0242e4849319e915947425c9a837d53"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/7188953937a7aacd1cbc8839d052c8435c4c2460",
-				"reference": "7188953937a7aacd1cbc8839d052c8435c4c2460",
+				"url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/1b220f42a0242e4849319e915947425c9a837d53",
+				"reference": "1b220f42a0242e4849319e915947425c9a837d53",
 				"shasum": ""
 			},
-            "require": {
-                "bower-asset/inputmask": "~3.2.2 | ~3.3.5",
-                "bower-asset/jquery": "3.6.*@stable | 3.5.*@stable | 3.4.*@stable | 3.3.*@stable | 3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
-                "bower-asset/punycode": "1.3.*",
-                "bower-asset/yii2-pjax": "~2.0.1",
-                "cebe/markdown": "~1.0.0 | ~1.1.0 | ~1.2.0",
-                "ext-ctype": "*",
-                "ext-mbstring": "*",
-                "ezyang/htmlpurifier": "~4.6",
-                "lib-pcre": "*",
+			"require": {
+				"bower-asset/inputmask": "~3.2.2 | ~3.3.5",
+				"bower-asset/jquery": "3.6.*@stable | 3.5.*@stable | 3.4.*@stable | 3.3.*@stable | 3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
+				"bower-asset/punycode": "1.3.*",
+				"bower-asset/yii2-pjax": "~2.0.1",
+				"cebe/markdown": "~1.0.0 | ~1.1.0 | ~1.2.0",
+				"ext-ctype": "*",
+				"ext-mbstring": "*",
+				"ezyang/htmlpurifier": "~4.6",
+				"lib-pcre": "*",
                 "paragonie/random_compat": ">=1",
                 "php": ">=5.4.0",
                 "yiisoft/yii2-composer": "~2.0.4"
@@ -3152,11 +3172,11 @@
                 "yii2"
             ],
             "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "ircs://irc.libera.chat:6697/yii",
-                "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-                "source": "https://github.com/yiisoft/yii2",
-                "wiki": "http://www.yiiframework.com/wiki/"
+	            "forum": "https://www.yiiframework.com/forum/",
+	            "irc": "ircs://irc.libera.chat:6697/yii",
+	            "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+	            "source": "https://github.com/yiisoft/yii2",
+	            "wiki": "https://www.yiiframework.com/wiki/"
             },
             "funding": [
                 {
@@ -3172,7 +3192,7 @@
                     "type": "tidelift"
                 }
             ],
-			"time": "2021-12-29T09:45:13+00:00"
+			"time": "2021-12-30T07:51:17+00:00"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -3629,13 +3649,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-swiftmailer.git",
-                "reference": "dc5376e47b37af5703ce5da23e1f9ff9944d9c4d"
+	            "reference": "2472a3886b50d398c67dad9cd463d69a30174a82"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/dc5376e47b37af5703ce5da23e1f9ff9944d9c4d",
-                "reference": "dc5376e47b37af5703ce5da23e1f9ff9944d9c4d",
-                "shasum": ""
+	            "type": "zip",
+	            "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/2472a3886b50d398c67dad9cd463d69a30174a82",
+	            "reference": "2472a3886b50d398c67dad9cd463d69a30174a82",
+	            "shasum": ""
             },
             "require": {
                 "swiftmailer/swiftmailer": "~6.0",
@@ -3707,7 +3727,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-24T20:34:50+00:00"
+	        "time": "2021-12-30T08:48:58+00:00"
         }
     ],
     "packages-dev": [
@@ -7711,20 +7731,20 @@
             ],
             "time": "2021-10-20T07:26:36+00:00"
         },
-        {
-            "name": "yiisoft/yii2-gii",
-            "version": "2.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "eb14e9cc4c9d80a59e1252e5200600b42aa2bfbf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/eb14e9cc4c9d80a59e1252e5200600b42aa2bfbf",
-                "reference": "eb14e9cc4c9d80a59e1252e5200600b42aa2bfbf",
-                "shasum": ""
-            },
+	    {
+		    "name": "yiisoft/yii2-gii",
+		    "version": "2.2.4",
+		    "source": {
+			    "type": "git",
+			    "url": "https://github.com/yiisoft/yii2-gii.git",
+			    "reference": "80893fc4c0df97f3638938948bf34ca43dd8bff6"
+		    },
+		    "dist": {
+			    "type": "zip",
+			    "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/80893fc4c0df97f3638938948bf34ca43dd8bff6",
+			    "reference": "80893fc4c0df97f3638938948bf34ca43dd8bff6",
+			    "shasum": ""
+		    },
             "require": {
                 "phpspec/php-diff": "^1.1.0",
                 "yiisoft/yii2": "~2.0.14"
@@ -7792,7 +7812,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-09T21:07:34+00:00"
+		    "time": "2021-12-30T08:36:02+00:00"
         }
     ],
     "aliases": [],
