@@ -5,10 +5,12 @@
 /* @var $content string */
 
 use frontend\assets\AppAsset;
+use frontend\assets\OwlCarouselAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
 AppAsset::register($this);
+OwlCarouselAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -316,16 +318,6 @@ AppAsset::register($this);
                              alt="MacBookAir" class="img-responsive"/>
                     </div>
                 </div>
-                <script type="text/javascript"><!--
-					$('#slideshow0').owlCarousel({
-						items: 6,
-						autoPlay: 3000,
-						singleItem: true,
-						navigation: true,
-						navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
-						pagination: true
-					});
-					--></script>
                 <h3>Featured</h3>
                 <div class="row">
                     <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -485,15 +477,6 @@ AppAsset::register($this);
                              alt="Nintendo" class="img-responsive"/>
                     </div>
                 </div>
-                <script type="text/javascript"><!--
-					$('#carousel0').owlCarousel({
-						items: 6,
-						autoPlay: 3000,
-						navigation: true,
-						navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
-						pagination: true
-					});
-					--></script>
             </div>
         </div>
     </div>
@@ -546,6 +529,29 @@ AppAsset::register($this);
     </footer>
     
     <?php $this->endBody() ?>
+
+    <script>
+        $('#slideshow0').owlCarousel({
+            items: 1,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            nav: true,
+            navText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
+            dots: true
+        });
+    </script>
+    <script>
+        $('#carousel0').owlCarousel({
+            items: 6,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            nav: true,
+            navText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
+            dots: true
+        });
+    </script>
     </body>
     </html>
 <?php $this->endPage() ?>
