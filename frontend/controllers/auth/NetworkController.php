@@ -12,13 +12,15 @@ use yii\web\Controller;
 class NetworkController extends Controller
 {
     private $service;
-
+    
+    public $layout = 'cabinet';
+    
     public function __construct($id, $module, NetworkService $service, $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->service = $service;
     }
-
+    
     public function actions()
     {
         return [

@@ -11,13 +11,15 @@ use yii\web\Controller;
 class ResetController extends Controller
 {
     private $service;
-
+    
+    public $layout = 'cabinet';
+    
     public function __construct($id, $module, PasswordResetService $service, $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->service = $service;
     }
-
+    
     /**
      * @return mixed
      */

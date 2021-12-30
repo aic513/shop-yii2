@@ -10,13 +10,15 @@ use yii\web\Controller;
 class SignupController extends Controller
 {
     private $service;
-
+    
+    public $layout = 'cabinet';
+    
     public function __construct($id, $module, SignupService $service, $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->service = $service;
     }
-
+    
     public function behaviors(): array
     {
         return [
