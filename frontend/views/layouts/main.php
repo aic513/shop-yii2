@@ -125,7 +125,7 @@ AppAsset::register($this);
                                     <tr>
                                         <td class="text-center"><a
                                                     href="/index.php?route=product/product&amp;product_id=30"><img
-                                                        src="http://static.shop.dev/cache/products/canon_eos_5d_1-47x47.jpg"
+                                                        src="http://static.shop.test/cache/products/canon_eos_5d_1-47x47.jpg"
                                                         alt="Canon EOS 5D" title="Canon EOS 5D" class="img-thumbnail"/></a>
                                         </td>
                                         <td class="text-left"><a
@@ -145,7 +145,7 @@ AppAsset::register($this);
                                     <tr>
                                         <td class="text-center"><a
                                                     href="/index.php?route=product/product&amp;product_id=40"><img
-                                                        src="http://static.shop.dev/cache/products/iphone_1-47x47.jpg"
+                                                        src="http://static.shop.test/cache/products/iphone_1-47x47.jpg"
                                                         alt="iPhone" title="iPhone" class="img-thumbnail"/></a>
                                         </td>
                                         <td class="text-left"><a
