@@ -20,7 +20,7 @@ end
 domains = {
   frontend: 'frontend.shop.test',
   backend:  'backend.shop.test',
-  static: 'static.shop.dev'
+  static: 'static.shop.test'
 }
 
 config = {
