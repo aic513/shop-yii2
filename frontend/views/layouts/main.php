@@ -122,7 +122,7 @@ AppAsset::register($this);
                         <ul class="dropdown-menu pull-right">
                             <li>
                                 <table class="table table-striped">
-                                    <tr>
+                                    <tr>`
                                         <td class="text-center"><a
                                                     href="/index.php?route=product/product&amp;product_id=30"><img
                                                         src="http://static.shop.test/cache/products/canon_eos_5d_1-47x47.jpg"

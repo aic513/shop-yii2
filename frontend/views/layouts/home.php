@@ -26,11 +26,11 @@
             <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="product-thumb transition">
                     <div class="image"><a
-                                href="http://localhost:8080/index.php?route=product/product&amp;product_id=43"><img
+                                href="http://frontend.shop.test/index.php?route=product/product&amp;product_id=43"><img
                                     src="http://static.shop.test/cache/products/macbook_1-200x200.jpg"
                                     alt="MacBook" title="MacBook" class="img-responsive"/></a></div>
                     <div class="caption">
-                        <h4><a href="http://localhost:8080/index.php?route=product/product&amp;product_id=43">MacBook</a>
+                        <h4><a href="http://frontend.shop.test/index.php?route=product/product&amp;product_id=43">MacBook</a>
                         </h4>
                         <p>
 
@@ -54,12 +54,12 @@
             <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="product-thumb transition">
                     <div class="image"><a
-                                href="http://localhost:8080/index.php?route=product/product&amp;product_id=40"><img
+                                href="http://frontend.shop.test/index.php?route=product/product&amp;product_id=40"><img
                                     src="http://static.shop.test/cache/products/iphone_1-200x200.jpg"
                                     alt="iPhone" title="iPhone" class="img-responsive"/></a></div>
                     <div class="caption">
                         <h4>
-                            <a href="http://localhost:8080/index.php?route=product/product&amp;product_id=40">iPhone</a>
+                            <a href="http://frontend.shop.test/index.php?route=product/product&amp;product_id=40">iPhone</a>
                         </h4>
                         <p>
                             iPhone is a revolutionary new mobile phone that allows you to make a call by simply
@@ -81,12 +81,12 @@
             <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="product-thumb transition">
                     <div class="image"><a
-                                href="http://localhost:8080/index.php?route=product/product&amp;product_id=42"><img
+                                href="http://frontend.shop.test/index.php?route=product/product&amp;product_id=42"><img
                                     src="http://static.shop.test/cache/products/apple_cinema_30-200x200.jpg"
                                     alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"
                                     class="img-responsive"/></a></div>
                     <div class="caption">
-                        <h4><a href="http://localhost:8080/index.php?route=product/product&amp;product_id=42">Apple
+                        <h4><a href="http://frontend.shop.test/index.php?route=product/product&amp;product_id=42">Apple
                                 Cinema 30&quot;</a></h4>
                         <p>
                             The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution.
@@ -109,11 +109,11 @@
             <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="product-thumb transition">
                     <div class="image"><a
-                                href="http://localhost:8080/index.php?route=product/product&amp;product_id=30"><img
+                                href="http://frontend.shop.test/index.php?route=product/product&amp;product_id=30"><img
                                     src="http://static.shop.test/cache/products/canon_eos_5d_1-200x200.jpg"
                                     alt="Canon EOS 5D" title="Canon EOS 5D" class="img-responsive"/></a></div>
                     <div class="caption">
-                        <h4><a href="http://localhost:8080/index.php?route=product/product&amp;product_id=30">Canon
+                        <h4><a href="http://frontend.shop.test/index.php?route=product/product&amp;product_id=30">Canon
                                 EOS 5D</a></h4>
                         <p>
                             Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category',
@@ -156,7 +156,7 @@
                      alt="Burger King" class="img-responsive"/>
             </div>
             <div class="item text-center">
-                <img src="http://static.shop.test/cache/manufacturers/canon-130x100.png" alt="Canon"
+                <img src="http://static.shop.test/cache/manufacturers/canon-130x100.jpg" alt="Canon"
                      class="img-responsive"/>
             </div>
             <div class="item text-center">
@@ -172,7 +172,7 @@
                      alt="Disney" class="img-responsive"/>
             </div>
             <div class="item text-center">
-                <img src="http://static.shop.test/cache/manufacturers/starbucks-130x100.png"
+                <img src="http://static.shop.test/cache/manufacturers/starbucks-130x100.jpg"
                      alt="Starbucks" class="img-responsive"/>
             </div>
             <div class="item text-center">
