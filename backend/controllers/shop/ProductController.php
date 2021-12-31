@@ -3,6 +3,7 @@
 namespace backend\controllers\shop;
 
 use backend\forms\Shop\ProductSearch;
+use DomainException;
 use shop\entities\Shop\Product\Modification;
 use shop\entities\Shop\Product\Product;
 use shop\forms\manage\Shop\Product\PhotosForm;
@@ -33,6 +34,8 @@ class ProductController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                    'activate' => ['POST'],
+                    'draft' => ['POST'],
                     'delete-photo' => ['POST'],
                     'move-photo-up' => ['POST'],
                     'move-photo-down' => ['POST'],
@@ -79,9 +82,9 @@ class ProductController extends Controller
         if ($photosForm->load(Yii::$app->request->post()) && $photosForm->validate()) {
             try {
                 $this->service->addPhotos($product->id, $photosForm);
-                
+        
                 return $this->redirect(['view', 'id' => $product->id]);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -103,9 +106,9 @@ class ProductController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $product = $this->service->create($form);
-                
+        
                 return $this->redirect(['view', 'id' => $product->id]);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -129,9 +132,9 @@ class ProductController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $this->service->edit($product->id, $form);
-                
+        
                 return $this->redirect(['view', 'id' => $product->id]);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -156,9 +159,9 @@ class ProductController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $this->service->changePrice($product->id, $form);
-                
+        
                 return $this->redirect(['view', 'id' => $product->id]);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -179,11 +182,43 @@ class ProductController extends Controller
     {
         try {
             $this->service->remove($id);
-        } catch (\DomainException $e) {
+        } catch (DomainException $e) {
+            Yii::$app->session->setFlash('error', $e->getMessage());
+        }
+    
+        return $this->redirect(['index']);
+    }
+    
+    /**
+     * @param integer $id
+     *
+     * @return mixed
+     */
+    public function actionActivate($id)
+    {
+        try {
+            $this->service->activate($id);
+        } catch (DomainException $e) {
             Yii::$app->session->setFlash('error', $e->getMessage());
         }
         
-        return $this->redirect(['index']);
+        return $this->redirect(['view', 'id' => $id]);
+    }
+    
+    /**
+     * @param integer $id
+     *
+     * @return mixed
+     */
+    public function actionDraft($id)
+    {
+        try {
+            $this->service->draft($id);
+        } catch (DomainException $e) {
+            Yii::$app->session->setFlash('error', $e->getMessage());
+        }
+        
+        return $this->redirect(['view', 'id' => $id]);
     }
     
     /**
@@ -196,7 +231,7 @@ class ProductController extends Controller
     {
         try {
             $this->service->removePhoto($id, $photo_id);
-        } catch (\DomainException $e) {
+        } catch (DomainException $e) {
             Yii::$app->session->setFlash('error', $e->getMessage());
         }
         

@@ -7,5 +7,5 @@ use yii\db\ActiveQuery;
 
 class CategoryQuery extends ActiveQuery
 {
-	use NestedSetsQueryTrait;
+    use NestedSetsQueryTrait;
 }
