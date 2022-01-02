@@ -2,6 +2,7 @@
 
 namespace frontend\controllers\shop;
 
+use shop\forms\Shop\AddToCartForm;
 use shop\readModels\Shop\BrandReadRepository;
 use shop\readModels\Shop\CategoryReadRepository;
 use shop\readModels\Shop\ProductReadRepository;
@@ -122,11 +123,14 @@ class CatalogController extends Controller
         if (!$product = $this->products->find($id)) {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
-    
+        
         $this->layout = 'blank';
-    
+        
+        $cartForm = new AddToCartForm($product);
+        
         return $this->render('product', [
             'product' => $product,
+            'cartForm' => $cartForm,
         ]);
     }
 }
