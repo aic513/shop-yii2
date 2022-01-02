@@ -9,19 +9,20 @@ use shop\entities\Shop\queries\CategoryQuery;
 use yii\db\ActiveRecord;
 
 /**
- * @property integer  $id
- * @property string   $name
- * @property string   $slug
- * @property string   $title
- * @property string   $description
- * @property integer  $lft
- * @property integer  $rgt
- * @property integer  $depth
- * @property Meta     $meta
+ * @property integer    $id
+ * @property string     $name
+ * @property string     $slug
+ * @property string     $title
+ * @property string     $description
+ * @property integer    $lft
+ * @property integer    $rgt
+ * @property integer    $depth
+ * @property Meta       $meta
  *
- * @property Category $parent
- * @property Category $prev
- * @property Category $next
+ * @property Category   $parent
+ * @property Category[] $parents
+ * @property Category   $prev
+ * @property Category   $next
  * @mixin NestedSetsBehavior
  */
 class Category extends ActiveRecord
