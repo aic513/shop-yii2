@@ -4,10 +4,12 @@ namespace frontend\controllers\shop;
 
 use shop\forms\Shop\AddToCartForm;
 use shop\forms\Shop\ReviewForm;
+use shop\forms\Shop\Search\SearchForm;
 use shop\readModels\Shop\BrandReadRepository;
 use shop\readModels\Shop\CategoryReadRepository;
 use shop\readModels\Shop\ProductReadRepository;
 use shop\readModels\Shop\TagReadRepository;
+use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
@@ -104,12 +106,29 @@ class CatalogController extends Controller
         if (!$tag = $this->tags->find($id)) {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
-        
+    
         $dataProvider = $this->products->getAllByTag($tag);
-        
+    
         return $this->render('tag', [
             'tag' => $tag,
             'dataProvider' => $dataProvider,
+        ]);
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function actionSearch()
+    {
+        $form = new SearchForm();
+        $form->load(Yii::$app->request->queryParams);
+        $form->validate();
+        
+        $dataProvider = $this->products->search($form);
+        
+        return $this->render('search', [
+            'dataProvider' => $dataProvider,
+            'searchForm' => $form,
         ]);
     }
     
