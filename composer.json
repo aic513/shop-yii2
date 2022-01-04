@@ -34,7 +34,8 @@
         "bower-asset/font-awesome": "^4.7",
         "bower-asset/owl.carousel": "^2.2",
         "bower-asset/magnific-popup": "^1.1",
-        "ext-gd": "*"
+        "ext-gd": "*",
+        "elasticsearch/elasticsearch": "^5.2"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
