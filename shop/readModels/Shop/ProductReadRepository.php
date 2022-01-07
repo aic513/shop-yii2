@@ -179,12 +179,23 @@ class ProductReadRepository
         } else {
             $query = Product::find()->andWhere(['id' => 0]);
         }
-        
+    
         return new SimpleActiveDataProvider([
             'query' => $query,
             'totalCount' => $response['hits']['total'],
             'pagination' => $pagination,
             'sort' => $sort,
+        ]);
+    }
+    
+    public function getWishList($userId): ActiveDataProvider
+    {
+        return new ActiveDataProvider([
+            'query' => Product::find()
+                ->alias('p')->active('p')
+                ->joinWith('wishlistItems w', false, 'INNER JOIN')
+                ->andWhere(['w.user_id' => $userId]),
+            'sort' => false,
         ]);
     }
 }
