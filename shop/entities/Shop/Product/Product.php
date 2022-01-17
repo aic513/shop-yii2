@@ -139,7 +139,7 @@ class Product extends ActiveRecord
                 return $val;
             }
         }
-        
+    
         return Value::blank($id);
     }
     
@@ -150,6 +150,16 @@ class Product extends ActiveRecord
         foreach ($this->modifications as $modification) {
             if ($modification->isIdEqualTo($id)) {
                 return $modification;
+            }
+        }
+        throw new DomainException('Modification is not found.');
+    }
+    
+    public function getModificationPrice($id): int
+    {
+        foreach ($this->modifications as $modification) {
+            if ($modification->isIdEqualTo($id)) {
+                return $modification->price ?: $this->price_new;
             }
         }
         throw new DomainException('Modification is not found.');
