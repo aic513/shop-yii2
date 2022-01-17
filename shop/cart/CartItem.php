@@ -2,6 +2,7 @@
 
 namespace shop\cart;
 
+use DomainException;
 use shop\entities\Shop\Product\Modification;
 use shop\entities\Shop\Product\Product;
 
@@ -15,9 +16,17 @@ class CartItem
     
     public function __construct(Product $product, $modificationId, $quantity)
     {
+        if (!$product->canBeCheckout($modificationId, $quantity)) {
+            throw new DomainException('Quantity is too big.');
+        }
         $this->product = $product;
         $this->modificationId = $modificationId;
         $this->quantity = $quantity;
+    }
+    
+    public function getWeight(): int
+    {
+        return $this->product->weight * $this->quantity;
     }
     
     public function getId(): string

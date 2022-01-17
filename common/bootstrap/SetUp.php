@@ -5,6 +5,7 @@ namespace common\bootstrap;
 use Elasticsearch\Client;
 use Elasticsearch\ClientBuilder;
 use shop\cart\Cart;
+use shop\cart\cost\calculator\DynamicCost;
 use shop\cart\cost\calculator\SimpleCost;
 use shop\cart\storage\SessionStorage;
 use shop\services\contact\ContactService;

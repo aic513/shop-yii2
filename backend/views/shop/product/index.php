@@ -2,6 +2,7 @@
 
 use shop\entities\Shop\Product\Product;
 use shop\helpers\PriceHelper;
+use shop\helpers\ProductHelper;
 use yii\grid\GridView;
 use yii\helpers\Html;
 
@@ -23,6 +24,9 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= GridView::widget([
                 'dataProvider' => $dataProvider,
                 'filterModel' => $searchModel,
+                'rowOptions' => function (Product $model) {
+                    return $model->quantity <= 0 ? ['style' => 'background: #fdc'] : [];
+                },
                 'columns' => [
                     [
                         'value' => function (Product $model) {
@@ -50,8 +54,16 @@ $this->params['breadcrumbs'][] = $this->title;
                             return PriceHelper::format($model->price_new);
                         },
                     ],
+                    'quantity',
+                    [
+                        'attribute' => 'status',
+                        'filter' => $searchModel->statusList(),
+                        'value' => function (Product $model) {
+                            return ProductHelper::statusLabel($model->status);
+                        },
+                        'format' => 'raw',
+                    ],
                 ],
             ]); ?>
         </div>
     </div>
-</div>
