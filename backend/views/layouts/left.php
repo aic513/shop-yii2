@@ -65,6 +65,12 @@
                                 'url' => ['/shop/characteristic/index'],
                                 'active' => $this->context->id == 'shop/characteristic'
                             ],
+                            [
+                                'label' => 'Delivery Methods',
+                                'icon' => 'file-o',
+                                'url' => ['/shop/delivery/index'],
+                                'active' => $this->context->id == 'shop/delivery'
+                            ],
                         ]
                     ],
                     ['label' => 'Users', 'icon' => 'user', 'url' => ['/user/index'], 'active' => $this->context->id == 'user/index'],
