@@ -48,6 +48,11 @@ class CartItem
         return null;
     }
     
+    public function getModificationId(): ?Modification
+    {
+        return $this->modificationId;
+    }
+    
     public function getQuantity(): int
     {
         return $this->quantity;

@@ -2,6 +2,7 @@
 
 namespace shop\entities\Shop\Product;
 
+use DomainException;
 use yii\db\ActiveRecord;
 
 /*
@@ -30,6 +31,14 @@ class Modification extends ActiveRecord
         $this->name = $name;
         $this->price = $price;
         $this->quantity = $quantity;
+    }
+    
+    public function checkout($quantity): void
+    {
+        if ($quantity > $this->quantity) {
+            throw new DomainException('Only ' . $this->quantity . ' items are available.');
+        }
+        $this->quantity -= $quantity;
     }
     
     public function isIdEqualTo($id)
