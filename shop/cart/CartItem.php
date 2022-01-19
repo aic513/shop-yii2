@@ -39,6 +39,11 @@ class CartItem
         return $this->product;
     }
     
+    public function getProductId(): int
+    {
+        return $this->product->id;
+    }
+    
     public function getModification(): ?Modification
     {
         if ($this->modificationId) {
@@ -48,7 +53,7 @@ class CartItem
         return null;
     }
     
-    public function getModificationId(): ?Modification
+    public function getModificationId(): ?int
     {
         return $this->modificationId;
     }
