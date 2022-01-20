@@ -46,7 +46,7 @@ sudo systemctl enable elasticsearch.service
 sudo systemctl start elasticsearch.service
 
 info "Install additional software"
-apt-get install -y php7.4-curl php7.4-cli php7.4-intl php7.4-mysqlnd php7.4-gd php7.4-fpm php7.4-mbstring php7.4-xml unzip nginx mysql-server-5.7 php7.4-xdebug
+apt-get install -y php7.4-curl php7.4-cli php7.4-intl php7.4-mysqlnd php7.4-gd php7.4-fpm php7.4-mbstring php7.4-xml php7.4-zip unzip nginx mysql-server-5.7 php7.4-xdebug
 
 info "Update OS software"
 apt-get update

@@ -4,6 +4,8 @@ namespace backend\controllers\shop;
 
 use backend\forms\Shop\OrderSearch;
 use DomainException;
+use PHPExcel;
+use PHPExcel_IOFactory;
 use shop\entities\Shop\Order\Order;
 use shop\forms\manage\Shop\Order\OrderEditForm;
 use shop\forms\manage\Shop\OrderForm;
@@ -30,9 +32,35 @@ class OrderController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                    'export' => ['POST'],
                 ],
             ],
         ];
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function actionExport()
+    {
+        $query = Order::find()->orderBy(['id' => SORT_DESC]);
+        
+        $objPHPExcel = new PHPExcel();
+        
+        $worksheet = $objPHPExcel->getActiveSheet();
+        
+        foreach ($query->each() as $row => $order) {
+            /** @var Order $order */
+            
+            $worksheet->setCellValueByColumnAndRow(0, $row + 1, $order->id);
+            $worksheet->setCellValueByColumnAndRow(1, $row + 1, date('Y-m-d H:i:s', $order->created_at));
+        }
+        
+        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+        $file = tempnam(sys_get_temp_dir(), 'export');
+        $objWriter->save($file);
+        
+        return Yii::$app->response->sendFile($file, 'report.xlsx');
     }
     
     /**

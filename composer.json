@@ -36,7 +36,10 @@
         "bower-asset/magnific-popup": "^1.1",
         "ext-gd": "*",
         "elasticsearch/elasticsearch": "^6",
-        "yii-cms/yii2-robokassa": "^1.1"
+        "yii-cms/yii2-robokassa": "^1.1",
+        "phpoffice/phpexcel": "^1.8",
+        "ruecoder/phpexcel": "dev-master",
+        "ruecoder/excelbundle": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
@@ -62,6 +65,14 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "url": "https://github.com/ruecoder/ExcelBundle.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/ruecoder/PHPExcel.git",
+            "type": "git"
         }
     ]
 }
