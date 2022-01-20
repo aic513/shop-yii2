@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "070d60b47c5a071f7a44a67f3df60a5e",
+    "content-hash": "998ceca5982b2aa3211aff5c485a1c19",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -79,7 +79,7 @@
             "version": "v4.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "url": "git@github.com:FortAwesome/Font-Awesome.git",
                 "reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687"
             },
             "dist": {
@@ -174,12 +174,12 @@
             "version": "v1.3.2",
             "source": {
                 "type": "git",
-                "url": "git@github.com:bestiejs/punycode.js.git",
+                "url": "https://github.com/mathiasbynens/punycode.js.git",
                 "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bestiejs/punycode.js/zipball/38c8d3131a82567bfef18da09f7f4db68c84f8a3",
+                "url": "https://api.github.com/repos/mathiasbynens/punycode.js/zipball/38c8d3131a82567bfef18da09f7f4db68c84f8a3",
                 "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
             },
             "type": "bower-asset"
@@ -388,21 +388,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "59bfb3b9be04237be4cd1afea9bbb58794c25ce8"
+                "reference": "28ba6ff4c9fdd9e5cf251af81fe666e6c9cbc5ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/59bfb3b9be04237be4cd1afea9bbb58794c25ce8",
-                "reference": "59bfb3b9be04237be4cd1afea9bbb58794c25ce8",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/28ba6ff4c9fdd9e5cf251af81fe666e6c9cbc5ef",
+                "reference": "28ba6ff4c9fdd9e5cf251af81fe666e6c9cbc5ef",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2 || ^8.0"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^8.0",
-                "phpstan/phpstan": "^0.12",
-                "phpunit/phpunit": "^8.2 || ^9.4"
+                "doctrine/coding-standard": "^9.0",
+                "phpstan/phpstan": "^1.3",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "vimeo/psalm": "^4.11"
             },
             "type": "library",
             "autoload": {
@@ -455,7 +456,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-20T07:15:06+00:00"
+            "time": "2022-01-12T09:06:08+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -758,12 +759,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "02e2e6bccad31373bb2224fccdb8e9a3166124b9"
+                "reference": "1e843e0d8de552d6f7f2e14adf18deddeaa7d007"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/02e2e6bccad31373bb2224fccdb8e9a3166124b9",
-                "reference": "02e2e6bccad31373bb2224fccdb8e9a3166124b9",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/1e843e0d8de552d6f7f2e14adf18deddeaa7d007",
+                "reference": "1e843e0d8de552d6f7f2e14adf18deddeaa7d007",
                 "shasum": ""
             },
             "default-branch": true,
@@ -806,7 +807,7 @@
             ],
             "support": {
                 "issues": "https://github.com/kartik-v/bootstrap-fileinput/issues",
-                "source": "https://github.com/kartik-v/bootstrap-fileinput/tree/v5.2.7"
+                "source": "https://github.com/kartik-v/bootstrap-fileinput/tree/master"
             },
             "funding": [
                 {
@@ -814,7 +815,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-12-17T16:05:03+00:00"
+            "time": "2022-01-12T20:26:38+00:00"
         },
         {
             "name": "kartik-v/bootstrap-star-rating",
@@ -1054,17 +1055,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-krajee-base.git",
-                "reference": "d94383b63edc74e03d530925325cf5bb930f6e84"
+                "reference": "fd1d7a97add94a2e0974240d7ac70275ce454faf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/d94383b63edc74e03d530925325cf5bb930f6e84",
-                "reference": "d94383b63edc74e03d530925325cf5bb930f6e84",
+                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/fd1d7a97add94a2e0974240d7ac70275ce454faf",
+                "reference": "fd1d7a97add94a2e0974240d7ac70275ce454faf",
                 "shasum": ""
             },
             "suggest": {
                 "yiisoft/yii2-bootstrap": "for Krajee extensions to work with Bootstrap 3.x version",
-                "yiisoft/yii2-bootstrap4": "for Krajee extensions to work with Bootstrap 4.x version"
+                "yiisoft/yii2-bootstrap4": "for Krajee extensions to work with Bootstrap 4.x version",
+                "yiisoft/yii2-bootstrap5": "for Krajee extensions to work with Bootstrap 5.x version"
             },
             "default-branch": true,
             "type": "yii2-extension",
@@ -1103,7 +1105,7 @@
                 "issues": "https://github.com/kartik-v/yii2-krajee-base/issues",
                 "source": "https://github.com/kartik-v/yii2-krajee-base/tree/master"
             },
-            "time": "2022-01-05T14:15:15+00:00"
+            "time": "2022-01-11T07:11:10+00:00"
         },
         {
             "name": "kartik-v/yii2-widget-activeform",
@@ -2378,12 +2380,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "cba4096b51f5e588ee60cf7fbf3bf02a13ef0439"
+                "reference": "91748753a20dd02a227fc10777bb996a7ca527fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/cba4096b51f5e588ee60cf7fbf3bf02a13ef0439",
-                "reference": "cba4096b51f5e588ee60cf7fbf3bf02a13ef0439",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/91748753a20dd02a227fc10777bb996a7ca527fc",
+                "reference": "91748753a20dd02a227fc10777bb996a7ca527fc",
                 "shasum": ""
             },
             "require": {
@@ -2425,7 +2427,7 @@
                 "issues": "https://github.com/paragonie/random_compat/issues",
                 "source": "https://github.com/paragonie/random_compat"
             },
-            "time": "2021-10-04T08:39:19+00:00"
+            "time": "2022-01-17T05:50:28+00:00"
         },
         {
             "name": "paulzi/yii2-nested-sets",
@@ -3334,6 +3336,58 @@
             "time": "2021-06-19T13:45:26+00:00"
         },
         {
+            "name": "yii-cms/yii2-robokassa",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii-cms/yii2-robokassa.git",
+                "reference": "b7f02c5e33a727e13868d2bfc523a90909efbb55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii-cms/yii2-robokassa/zipball/b7f02c5e33a727e13868d2bfc523a90909efbb55",
+                "reference": "b7f02c5e33a727e13868d2bfc523a90909efbb55",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.14"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.27|~5.7.21|^6.2"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "robokassa\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Gonimar",
+                    "email": "sergey.gonimar@gmail.com"
+                }
+            ],
+            "description": "Robokassa payment extension.",
+            "keywords": [
+                "robokassa",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/yii-cms/yii2-robokassa/issues",
+                "source": "https://github.com/yii-cms/yii2-robokassa/tree/master"
+            },
+            "time": "2019-07-02T05:29:41+00:00"
+        },
+        {
             "name": "yii-dream-team/yii2-upload-behavior",
             "version": "1.2.3",
             "source": {
@@ -3392,12 +3446,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "9219e4a278aa8cfe69fd9e76127daee30bd1a258"
+                "reference": "b82b860e3fd644e96c7ff5ff7b927ef9662b8283"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/9219e4a278aa8cfe69fd9e76127daee30bd1a258",
-                "reference": "9219e4a278aa8cfe69fd9e76127daee30bd1a258",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/b82b860e3fd644e96c7ff5ff7b927ef9662b8283",
+                "reference": "b82b860e3fd644e96c7ff5ff7b927ef9662b8283",
                 "shasum": ""
             },
             "require": {
@@ -3507,7 +3561,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-05T12:12:10+00:00"
+            "time": "2022-01-20T08:22:25+00:00"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -4116,12 +4170,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "b0aa2f15e430897663afcc26cbaadaf793ab9022"
+                "reference": "8a18c7454cf66414b0f15d4d00267708cd6900ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/b0aa2f15e430897663afcc26cbaadaf793ab9022",
-                "reference": "b0aa2f15e430897663afcc26cbaadaf793ab9022",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/8a18c7454cf66414b0f15d4d00267708cd6900ca",
+                "reference": "8a18c7454cf66414b0f15d4d00267708cd6900ca",
                 "shasum": ""
             },
             "require": {
@@ -4207,7 +4261,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-01-05T23:45:18+00:00"
+            "time": "2022-01-20T06:47:49+00:00"
         },
         {
             "name": "codeception/lib-asserts",
@@ -4434,22 +4488,30 @@
         },
         {
             "name": "codeception/module-yii2",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-yii2.git",
-                "reference": "aec2976c45136056f1b05c930cd376bb283d42e2"
+                "reference": "14269d059b8eaedf3d414a673907bd874cd4ed04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-yii2/zipball/aec2976c45136056f1b05c930cd376bb283d42e2",
-                "reference": "aec2976c45136056f1b05c930cd376bb283d42e2",
+                "url": "https://api.github.com/repos/Codeception/module-yii2/zipball/14269d059b8eaedf3d414a673907bd874cd4ed04",
+                "reference": "14269d059b8eaedf3d414a673907bd874cd4ed04",
                 "shasum": ""
             },
             "require": {
                 "codeception/codeception": "^4.0",
                 "codeception/lib-innerbrowser": "^1.0",
-                "php": ">=5.6.0 <=8.1"
+                "php": ">=5.6.0 <=8.1 | ~8.1.0"
+            },
+            "require-dev": {
+                "codeception/module-asserts": "^1.3",
+                "codeception/module-filesystem": "^1.0",
+                "codeception/verify": "<2",
+                "codemix/yii2-localeurls": "^1.7",
+                "yiisoft/yii2": "dev-master",
+                "yiisoft/yii2-app-advanced": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -4480,9 +4542,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/module-yii2/issues",
-                "source": "https://github.com/Codeception/module-yii2/tree/1.1.4"
+                "source": "https://github.com/Codeception/module-yii2/tree/1.1.5"
             },
-            "time": "2021-10-23T08:48:42+00:00"
+            "time": "2021-12-30T09:16:01+00:00"
         },
         {
             "name": "codeception/phpunit-wrapper",
@@ -4534,16 +4596,16 @@
         },
         {
             "name": "codeception/stub",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Stub.git",
-                "reference": "4c9cf3e19bd5f064e08e7f3ba6be651c218dc6ae"
+                "reference": "ce0a9e418c775ca8b737d50c2b4ac1132f3990d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Stub/zipball/4c9cf3e19bd5f064e08e7f3ba6be651c218dc6ae",
-                "reference": "4c9cf3e19bd5f064e08e7f3ba6be651c218dc6ae",
+                "url": "https://api.github.com/repos/Codeception/Stub/zipball/ce0a9e418c775ca8b737d50c2b4ac1132f3990d8",
+                "reference": "ce0a9e418c775ca8b737d50c2b4ac1132f3990d8",
                 "shasum": ""
             },
             "require": {
@@ -4566,9 +4628,9 @@
             "description": "Flexible Stub wrapper for PHPUnit's Mock Builder",
             "support": {
                 "issues": "https://github.com/Codeception/Stub/issues",
-                "source": "https://github.com/Codeception/Stub/tree/4.0.0"
+                "source": "https://github.com/Codeception/Stub/tree/4.0.1"
             },
-            "time": "2021-12-07T14:39:17+00:00"
+            "time": "2022-01-08T09:35:36+00:00"
         },
         {
             "name": "codeception/verify",
@@ -4690,12 +4752,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "9594d0aad844f6fab3e5e0e53a1ebd5d28605c7f"
+                "reference": "34d231f7679396ed44c280e1e2b0020d04026160"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/9594d0aad844f6fab3e5e0e53a1ebd5d28605c7f",
-                "reference": "9594d0aad844f6fab3e5e0e53a1ebd5d28605c7f",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/34d231f7679396ed44c280e1e2b0020d04026160",
+                "reference": "34d231f7679396ed44c280e1e2b0020d04026160",
                 "shasum": ""
             },
             "require": {
@@ -4721,7 +4783,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "v1.17-dev"
+                    "dev-main": "v1.18-dev"
                 }
             },
             "autoload": {
@@ -4748,7 +4810,7 @@
                 "issues": "https://github.com/FakerPHP/Faker/issues",
                 "source": "https://github.com/FakerPHP/Faker/tree/main"
             },
-            "time": "2022-01-02T10:07:40+00:00"
+            "time": "2022-01-20T19:57:46+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -5675,12 +5737,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f085bc8290a811c4c6f0a5f8f512aeaae08b05ca"
+                "reference": "9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f085bc8290a811c4c6f0a5f8f512aeaae08b05ca",
-                "reference": "f085bc8290a811c4c6f0a5f8f512aeaae08b05ca",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e",
+                "reference": "9b5a2e5cc9d615ab9b1418753c42a2f8c0d5285e",
                 "shasum": ""
             },
             "require": {
@@ -5764,7 +5826,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-01T08:00:28+00:00"
+            "time": "2022-01-15T09:00:27+00:00"
         },
         {
             "name": "psr/container",
@@ -6822,12 +6884,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "72ff58c9163afd4bcec2bff53476c68d14489b29"
+                "reference": "6c6664efbf6fc5f22bc6cbcb03616dc7f1eb6e6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/72ff58c9163afd4bcec2bff53476c68d14489b29",
-                "reference": "72ff58c9163afd4bcec2bff53476c68d14489b29",
+                "url": "https://api.github.com/repos/symfony/console/zipball/6c6664efbf6fc5f22bc6cbcb03616dc7f1eb6e6f",
+                "reference": "6c6664efbf6fc5f22bc6cbcb03616dc7f1eb6e6f",
                 "shasum": ""
             },
             "require": {
@@ -6914,7 +6976,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:53:40+00:00"
+            "time": "2022-01-12T18:55:10+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -7663,12 +7725,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "e6a5d5ecf6589c5247d18e0e74e30b11dfd51a3d"
+                "reference": "92043b7d8383e48104e411bc9434b260dbeb5a10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/e6a5d5ecf6589c5247d18e0e74e30b11dfd51a3d",
-                "reference": "e6a5d5ecf6589c5247d18e0e74e30b11dfd51a3d",
+                "url": "https://api.github.com/repos/symfony/string/zipball/92043b7d8383e48104e411bc9434b260dbeb5a10",
+                "reference": "92043b7d8383e48104e411bc9434b260dbeb5a10",
                 "shasum": ""
             },
             "require": {
@@ -7726,7 +7788,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v5.4.2"
+                "source": "https://github.com/symfony/string/tree/5.4"
             },
             "funding": [
                 {
@@ -7742,7 +7804,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-16T21:52:00+00:00"
+            "time": "2022-01-02T09:53:40+00:00"
         },
         {
             "name": "symfony/yaml",
