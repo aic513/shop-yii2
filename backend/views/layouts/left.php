@@ -36,6 +36,12 @@
                         'icon' => 'folder',
                         'items' => [
                             [
+                                'label' => 'Orders',
+                                'icon' => 'file-o',
+                                'url' => ['/shop/order/index'],
+                                'active' => $this->context->id == 'shop/order'
+                            ],
+                            [
                                 'label' => 'Products',
                                 'icon' => 'file-o',
                                 'url' => ['/shop/product/index'],
