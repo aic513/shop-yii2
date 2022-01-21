@@ -4,6 +4,7 @@
 
 /* @var $post shop\entities\Blog\Post\Post */
 
+use frontend\widgets\Blog\CommentsWidget;
 use yii\helpers\Html;
 
 $this->title = $post->getSeoTitle();
@@ -23,16 +24,20 @@ foreach ($post->tags as $tag) {
 }
 ?>
 
-<article>
-    <h1><?= Html::encode($post->title) ?></h1>
+    <article>
+        <h1><?= Html::encode($post->title) ?></h1>
 
-    <p><span class="glyphicon glyphicon-calendar"></span> <?= Yii::$app->formatter->asDatetime($post->created_at); ?></p>
-    
-    <?php if ($post->photo): ?>
-        <p><img src="<?= Html::encode($post->getThumbFileUrl('photo', 'origin')) ?>" alt="" class="img-responsive"/></p>
-    <?php endif; ?>
+        <p><span class="glyphicon glyphicon-calendar"></span> <?= Yii::$app->formatter->asDatetime($post->created_at); ?></p>
+        
+        <?php if ($post->photo): ?>
+            <p><img src="<?= Html::encode($post->getThumbFileUrl('photo', 'origin')) ?>" alt="" class="img-responsive"/></p>
+        <?php endif; ?>
 
-    <p><?= Yii::$app->formatter->asNtext($post->content) ?></p>
-</article>
+        <p><?= Yii::$app->formatter->asNtext($post->content) ?></p>
+    </article>
 
-<p>Tags: <?= implode(', ', $tagLinks) ?></p>
+    <p>Tags: <?= implode(', ', $tagLinks) ?></p>
+
+<?= CommentsWidget::widget([
+    'post' => $post,
+]) ?>
