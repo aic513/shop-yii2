@@ -3,6 +3,7 @@
 namespace frontend\controllers\blog;
 
 use DomainException;
+use shop\forms\Blog\CommentForm;
 use shop\readModels\Blog\CategoryReadRepository;
 use shop\readModels\Blog\PostReadRepository;
 use shop\readModels\Blog\TagReadRepository;

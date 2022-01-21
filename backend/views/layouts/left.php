@@ -91,6 +91,12 @@
                                 'active' => $this->context->id == 'blog/post'
                             ],
                             [
+                                'label' => 'Comments',
+                                'icon' => 'file-o',
+                                'url' => ['/blog/comment/index'],
+                                'active' => $this->context->id == 'blog/comment'
+                            ],
+                            [
                                 'label' => 'Tags',
                                 'icon' => 'file-o',
                                 'url' => ['/blog/tag/index'],
