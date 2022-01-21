@@ -85,6 +85,12 @@
                         'icon' => 'folder',
                         'items' => [
                             [
+                                'label' => 'Posts',
+                                'icon' => 'file-o',
+                                'url' => ['/blog/post/index'],
+                                'active' => $this->context->id == 'blog/post'
+                            ],
+                            [
                                 'label' => 'Tags',
                                 'icon' => 'file-o',
                                 'url' => ['/blog/tag/index'],
