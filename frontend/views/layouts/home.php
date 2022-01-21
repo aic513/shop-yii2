@@ -2,10 +2,11 @@
 
 /* @var $this \yii\web\View */
 
-use frontend\assets\OwlCarouselAsset;
-use frontend\widgets\Shop\FeaturedProductsWidget;
-
 /* @var $content string */
+
+use frontend\assets\OwlCarouselAsset;
+use frontend\widgets\Blog\LastPostsWidget;
+use frontend\widgets\Shop\FeaturedProductsWidget;
 
 OwlCarouselAsset::register($this);
 
@@ -17,11 +18,11 @@ OwlCarouselAsset::register($this);
             <div id="slideshow0" class="owl-carousel" style="opacity: 1;">
                 <div class="item">
                     <a href="index.php?route=product/product&amp;path=57&amp;product_id=49"><img
-                                src="http://static.shop.test/cache/banners/iPhone6-1140x380.jpg"
+                                src="http://static.shop.dev/cache/banners/iPhone6-1140x380.jpg"
                                 alt="iPhone 6" class="img-responsive"/></a>
                 </div>
                 <div class="item">
-                    <img src="http://static.shop.test/cache/banners/MacBookAir-1140x380.jpg"
+                    <img src="http://static.shop.dev/cache/banners/MacBookAir-1140x380.jpg"
                          alt="MacBookAir" class="img-responsive"/>
                 </div>
             </div>
@@ -31,49 +32,55 @@ OwlCarouselAsset::register($this);
                 'limit' => 4,
             ]) ?>
 
+            <h3>Last Posts</h3>
+            
+            <?= LastPostsWidget::widget([
+                'limit' => 4,
+            ]) ?>
+
             <div id="carousel0" class="owl-carousel">
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/nfl-130x100.png" alt="NFL"
+                    <img src="http://static.shop.dev/cache/manufacturers/nfl-130x100.png" alt="NFL"
                          class="img-responsive"/>
                 </div>
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/redbull-130x100.png"
+                    <img src="http://static.shop.dev/cache/manufacturers/redbull-130x100.png"
                          alt="RedBull" class="img-responsive"/>
                 </div>
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/sony-130x100.png" alt="Sony"
+                    <img src="http://static.shop.dev/cache/manufacturers/sony-130x100.png" alt="Sony"
                          class="img-responsive"/>
                 </div>
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/cocacola-130x100.png"
+                    <img src="http://static.shop.dev/cache/manufacturers/cocacola-130x100.png"
                          alt="Coca Cola" class="img-responsive"/>
                 </div>
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/burgerking-130x100.png"
+                    <img src="http://static.shop.dev/cache/manufacturers/burgerking-130x100.png"
                          alt="Burger King" class="img-responsive"/>
                 </div>
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/canon-130x100.png" alt="Canon"
+                    <img src="http://static.shop.dev/cache/manufacturers/canon-130x100.png" alt="Canon"
                          class="img-responsive"/>
                 </div>
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/harley-130x100.png"
+                    <img src="http://static.shop.dev/cache/manufacturers/harley-130x100.png"
                          alt="Harley Davidson" class="img-responsive"/>
                 </div>
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/dell-130x100.png" alt="Dell"
+                    <img src="http://static.shop.dev/cache/manufacturers/dell-130x100.png" alt="Dell"
                          class="img-responsive"/>
                 </div>
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/disney-130x100.png"
+                    <img src="http://static.shop.dev/cache/manufacturers/disney-130x100.png"
                          alt="Disney" class="img-responsive"/>
                 </div>
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/starbucks-130x100.png"
+                    <img src="http://static.shop.dev/cache/manufacturers/starbucks-130x100.png"
                          alt="Starbucks" class="img-responsive"/>
                 </div>
                 <div class="item text-center">
-                    <img src="http://static.shop.test/cache/manufacturers/nintendo-130x100.png"
+                    <img src="http://static.shop.dev/cache/manufacturers/nintendo-130x100.png"
                          alt="Nintendo" class="img-responsive"/>
                 </div>
             </div>
