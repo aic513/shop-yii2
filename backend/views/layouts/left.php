@@ -77,9 +77,27 @@
                                 'url' => ['/shop/delivery/index'],
                                 'active' => $this->context->id == 'shop/delivery'
                             ],
+
                         ]
                     ],
-                    ['label' => 'Users', 'icon' => 'user', 'url' => ['/user/index'], 'active' => $this->context->id == 'user/index'],
+                    [
+                        'label' => 'Blog',
+                        'icon' => 'folder',
+                        'items' => [
+                            [
+                                'label' => 'Tags',
+                                'icon' => 'file-o',
+                                'url' => ['/blog/tag/index'],
+                                'active' => $this->context->id == 'blog/tag'
+                            ],
+                        ]
+                    ],
+                    [
+                        'label' => 'Users',
+                        'icon' => 'user',
+                        'url' => ['/user/index'],
+                        'active' => $this->context->id == 'user/index'
+                    ],
                 ],
             ]
         ) ?>
