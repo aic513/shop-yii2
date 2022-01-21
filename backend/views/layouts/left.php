@@ -90,6 +90,12 @@
                                 'url' => ['/blog/tag/index'],
                                 'active' => $this->context->id == 'blog/tag'
                             ],
+                            [
+                                'label' => 'Categories',
+                                'icon' => 'file-o',
+                                'url' => ['/blog/category/index'],
+                                'active' => $this->context->id == 'blog/category'
+                            ],
                         ]
                     ],
                     [
