@@ -111,6 +111,18 @@
                         ]
                     ],
                     [
+                        'label' => 'Content',
+                        'icon' => 'folder',
+                        'items' => [
+                            [
+                                'label' => 'Pages',
+                                'icon' => 'file-o',
+                                'url' => ['/page/index'],
+                                'active' => $this->context->id == 'page'
+                            ],
+                        ]
+                    ],
+                    [
                         'label' => 'Users',
                         'icon' => 'user',
                         'url' => ['/user/index'],
