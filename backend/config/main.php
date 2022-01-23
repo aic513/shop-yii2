@@ -16,7 +16,29 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => [
         'log',
-        'common\bootstrap\SetUp'
+        'common\bootstrap\SetUp',
+        'backend\bootstrap\SetUp',
+    ],
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\Controller',
+            'access' => ['@'],
+            'plugin' => [
+                [
+                    'class' => '\mihaildev\elfinder\plugin\Sluggable',
+                    'lowercase' => true,
+                    'replacement' => '-'
+                ]
+            ],
+            'roots' => [
+                [
+                    'baseUrl' => '@static',
+                    'basePath' => '@staticRoot',
+                    'path' => 'files',
+                    'name' => 'Global'
+                ],
+            ],
+        ],
     ],
     'modules' => [],
     'components' => [
