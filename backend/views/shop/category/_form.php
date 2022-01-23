@@ -1,5 +1,6 @@
 <?php
 
+use mihaildev\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -8,9 +9,9 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-    <div class="category-form">
-
-<?php $form = ActiveForm::begin(); ?>
+<div class="category-form">
+    
+    <?php $form = ActiveForm::begin(); ?>
 
     <div class="box box-default">
         <div class="box-header with-border">Common</div>
@@ -19,6 +20,7 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
             <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
             <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'description')->widget(CKEditor::class) ?>
 
         </div>
     </div>
@@ -35,5 +37,7 @@ use yii\widgets\ActiveForm;
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
+    
+    <?php ActiveForm::end(); ?>
 
-<?php ActiveForm::end(); ?>
+</div>

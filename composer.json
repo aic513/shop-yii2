@@ -39,7 +39,8 @@
         "yii-cms/yii2-robokassa": "^1.1",
         "phpoffice/phpexcel": "^1.8",
         "ruecoder/phpexcel": "dev-master",
-        "ruecoder/excelbundle": "dev-master"
+        "ruecoder/excelbundle": "dev-master",
+        "mihaildev/yii2-ckeditor": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

@@ -1,6 +1,7 @@
 <?php
 
 use kartik\file\FileInput;
+use mihaildev\ckeditor\CKEditor;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 
@@ -39,7 +40,7 @@ use yii\helpers\Html;
         <div class="box-body">
             <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
             <?= $form->field($model, 'description')->textarea(['rows' => 5]) ?>
-            <?= $form->field($model, 'content')->textarea(['rows' => 20]) ?>
+            <?= $form->field($model, 'content')->widget(CKEditor::class) ?>
         </div>
     </div>
 
