@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f84de6180f5a59e2fed86b3d8067520",
+    "content-hash": "3639fef7db4e9510e0f983a66b30734b",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -664,6 +664,50 @@
             "time": "2021-12-25T01:21:49+00:00"
         },
         {
+            "name": "fishvision/yii2-migrate",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fishvision/yii2-migrate.git",
+                "reference": "9bf914bcbac5e71318079a50597e5d29bc42ac5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fishvision/yii2-migrate/zipball/9bf914bcbac5e71318079a50597e5d29bc42ac5a",
+                "reference": "9bf914bcbac5e71318079a50597e5d29bc42ac5a",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "fishvision\\migrate\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Berriman",
+                    "email": "alexb@fishvision.com"
+                }
+            ],
+            "description": "Extended migration support",
+            "keywords": [
+                "extension",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/fishvision/yii2-migrate/issues",
+                "source": "https://github.com/fishvision/yii2-migrate/tree/master"
+            },
+            "time": "2017-06-08T01:59:47+00:00"
+        },
+        {
             "name": "guzzlehttp/ringphp",
             "version": "dev-master",
             "source": {
@@ -1076,12 +1120,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-krajee-base.git",
-                "reference": "fd1d7a97add94a2e0974240d7ac70275ce454faf"
+                "reference": "c904bbaa4b32bb46664a6bff46a22adf512054e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/fd1d7a97add94a2e0974240d7ac70275ce454faf",
-                "reference": "fd1d7a97add94a2e0974240d7ac70275ce454faf",
+                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/c904bbaa4b32bb46664a6bff46a22adf512054e3",
+                "reference": "c904bbaa4b32bb46664a6bff46a22adf512054e3",
                 "shasum": ""
             },
             "suggest": {
@@ -1126,7 +1170,7 @@
                 "issues": "https://github.com/kartik-v/yii2-krajee-base/issues",
                 "source": "https://github.com/kartik-v/yii2-krajee-base/tree/master"
             },
-            "time": "2022-01-11T07:11:10+00:00"
+            "time": "2022-01-24T15:07:45+00:00"
         },
         {
             "name": "kartik-v/yii2-widget-activeform",
@@ -5596,12 +5640,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "bfbd43b583d97be510c5264df886d1625f33118d"
+                "reference": "f1b8a2d325ec93648a130cd4273c97b321231dfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/bfbd43b583d97be510c5264df886d1625f33118d",
-                "reference": "bfbd43b583d97be510c5264df886d1625f33118d",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/f1b8a2d325ec93648a130cd4273c97b321231dfb",
+                "reference": "f1b8a2d325ec93648a130cd4273c97b321231dfb",
                 "shasum": ""
             },
             "require": {
@@ -5711,7 +5755,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-21T16:26:52+00:00"
+            "time": "2022-01-23T20:26:59+00:00"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -6996,12 +7040,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "4e63216e8009625cfe5e4ffe019522b1bd36f233"
+                "reference": "2e77a868f6540695cf5ebf21e5ab472c65f47567"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/4e63216e8009625cfe5e4ffe019522b1bd36f233",
-                "reference": "4e63216e8009625cfe5e4ffe019522b1bd36f233",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/2e77a868f6540695cf5ebf21e5ab472c65f47567",
+                "reference": "2e77a868f6540695cf5ebf21e5ab472c65f47567",
                 "shasum": ""
             },
             "require": {
@@ -7052,9 +7096,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/main"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.18.0"
             },
-            "time": "2022-01-23T11:10:23+00:00"
+            "time": "2022-01-23T17:56:23+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -7981,12 +8025,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "6411097cf25bfab7e12dff338df2b83e10356114"
+                "reference": "d44c4784a97dbde1d65521fb63bc912830536191"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6411097cf25bfab7e12dff338df2b83e10356114",
-                "reference": "6411097cf25bfab7e12dff338df2b83e10356114",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d44c4784a97dbde1d65521fb63bc912830536191",
+                "reference": "d44c4784a97dbde1d65521fb63bc912830536191",
                 "shasum": ""
             },
             "require": {
@@ -8070,7 +8114,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-23T10:13:14+00:00"
+            "time": "2022-01-24T08:49:25+00:00"
         },
         {
             "name": "psr/http-factory",
@@ -9021,12 +9065,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "269324791c7d907f304ea789fc6cac7746bf67b5"
+                "reference": "209db6bd56df6dbc22d43644d657ed520fda3aba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/269324791c7d907f304ea789fc6cac7746bf67b5",
-                "reference": "269324791c7d907f304ea789fc6cac7746bf67b5",
+                "url": "https://api.github.com/repos/symfony/console/zipball/209db6bd56df6dbc22d43644d657ed520fda3aba",
+                "reference": "209db6bd56df6dbc22d43644d657ed520fda3aba",
                 "shasum": ""
             },
             "require": {
@@ -9113,7 +9157,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-22T06:53:01+00:00"
+            "time": "2022-01-24T15:10:59+00:00"
         },
         {
             "name": "symfony/css-selector",
