@@ -2,6 +2,8 @@
 
 namespace frontend\controllers\auth;
 
+use common\auth\Identity;
+use DomainException;
 use shop\services\auth\NetworkService;
 use Yii;
 use yii\authclient\AuthAction;
@@ -30,17 +32,17 @@ class NetworkController extends Controller
             ],
         ];
     }
-
+    
     public function onAuthSuccess(ClientInterface $client): void
     {
         $network = $client->getId();
         $attributes = $client->getUserAttributes();
         $identity = ArrayHelper::getValue($attributes, 'id');
-
+        
         try {
             $user = $this->service->auth($network, $identity);
-            Yii::$app->user->login($user, Yii::$app->params['user.rememberMeDuration']);
-        } catch (\DomainException $e) {
+            Yii::$app->user->login(new Identity($user), Yii::$app->params['user.rememberMeDuration']);
+        } catch (DomainException $e) {
             Yii::$app->errorHandler->logException($e);
             Yii::$app->session->setFlash('error', $e->getMessage());
         }
