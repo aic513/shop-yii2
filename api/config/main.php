@@ -49,6 +49,8 @@ return [
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
             ],
+            'enableCookieValidation' => false,
+            'enableCsrfValidation' => false,
         ],
         'response' => [
             'formatters' => [
