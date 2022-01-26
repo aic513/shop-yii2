@@ -7,7 +7,7 @@ use Elasticsearch\ClientBuilder;
 use shop\cart\Cart;
 use shop\cart\cost\calculator\DynamicCost;
 use shop\cart\cost\calculator\SimpleCost;
-use shop\cart\storage\CookieStorage;
+use shop\cart\storage\HybridStorage;
 use shop\services\contact\ContactService;
 use Yii;
 use yii\base\BootstrapInterface;
@@ -41,9 +41,9 @@ class SetUp implements BootstrapInterface
             $app->params['adminEmail']
         ]);
     
-        $container->setSingleton(Cart::class, function () {
+        $container->setSingleton(Cart::class, function () use ($app) {
             return new Cart(
-                new CookieStorage('cart', 3600),
+                new HybridStorage($app->get('user'), 'cart', 3600 * 24, $app->db),
                 new DynamicCost(new SimpleCost())
             );
         });

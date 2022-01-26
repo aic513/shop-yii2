@@ -10,7 +10,7 @@ use yii\rest\Controller;
 
 class ProfileController extends Controller
 {
-    public function actionIndex(): User
+    public function actionIndex(): array
     {
         return $this->serializeUser($this->findModel());
     }
