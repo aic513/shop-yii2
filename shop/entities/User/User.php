@@ -43,13 +43,20 @@ class User extends ActiveRecord
         $user->created_at = time();
         $user->status = self::STATUS_ACTIVE;
         $user->auth_key = Yii::$app->security->generateRandomString();
-        
+    
         return $user;
     }
     
     public function edit(string $username, string $email, string $phone): void
     {
         $this->username = $username;
+        $this->email = $email;
+        $this->phone = $phone;
+        $this->updated_at = time();
+    }
+    
+    public function editProfile(string $email, string $phone): void
+    {
         $this->email = $email;
         $this->phone = $phone;
         $this->updated_at = time();
