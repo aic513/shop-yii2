@@ -1,6 +1,6 @@
 <?php
 
-namespace shop\services\manage\Shop;
+namespace shop\useCases\manage\Shop;
 
 use shop\entities\Shop\Tag;
 use shop\forms\manage\Shop\TagForm;
@@ -8,9 +8,9 @@ use shop\repositories\Shop\TagRepository;
 
 class TagManageService
 {
-	private $tags;
-
-	public function __construct(TagRepository $tags)
+    private $tags;
+    
+    public function __construct(TagRepository $tags)
 	{
 		$this->tags = $tags;
 	}

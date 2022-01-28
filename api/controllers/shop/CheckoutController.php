@@ -5,7 +5,7 @@ namespace api\controllers\shop;
 use DomainException;
 use shop\cart\Cart;
 use shop\forms\Shop\Order\OrderForm;
-use shop\services\Shop\OrderService;
+use shop\useCases\Shop\OrderService;
 use Yii;
 use yii\helpers\Url;
 use yii\rest\Controller;

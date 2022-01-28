@@ -4,7 +4,7 @@ namespace backend\controllers;
 use common\auth\Identity;
 use DomainException;
 use shop\forms\auth\LoginForm;
-use shop\services\auth\AuthService;
+use shop\useCases\auth\AuthService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;

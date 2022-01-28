@@ -3,9 +3,10 @@
 namespace backend\controllers\shop;
 
 use backend\forms\Shop\CategorySearch;
+use DomainException;
 use shop\entities\Shop\Category;
 use shop\forms\manage\Shop\CategoryForm;
-use shop\services\manage\Shop\CategoryManageService;
+use shop\useCases\manage\Shop\CategoryManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
@@ -68,9 +69,9 @@ class CategoryController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $category = $this->service->create($form);
-                
+        
                 return $this->redirect(['view', 'id' => $category->id]);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -94,9 +95,9 @@ class CategoryController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $this->service->edit($category->id, $form);
-                
+        
                 return $this->redirect(['view', 'id' => $category->id]);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -117,7 +118,7 @@ class CategoryController extends Controller
     {
         try {
             $this->service->remove($id);
-        } catch (\DomainException $e) {
+        } catch (DomainException $e) {
             Yii::$app->errorHandler->logException($e);
             Yii::$app->session->setFlash('error', $e->getMessage());
         }

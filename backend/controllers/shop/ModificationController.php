@@ -2,9 +2,10 @@
 
 namespace backend\controllers\shop;
 
+use DomainException;
 use shop\entities\Shop\Product\Product;
 use shop\forms\manage\Shop\Product\ModificationForm;
-use shop\services\manage\Shop\ProductManageService;
+use shop\useCases\manage\Shop\ProductManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
@@ -55,7 +56,7 @@ class ModificationController extends Controller
                 $this->service->addModification($product->id, $form);
                 
                 return $this->redirect(['shop/product/view', 'id' => $product->id, '#' => 'modifications']);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -84,7 +85,7 @@ class ModificationController extends Controller
                 $this->service->editModification($product->id, $modification->id, $form);
                 
                 return $this->redirect(['shop/product/view', 'id' => $product->id, '#' => 'modifications']);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -108,7 +109,7 @@ class ModificationController extends Controller
         $product = $this->findModel($product_id);
         try {
             $this->service->removeModification($product->id, $id);
-        } catch (\DomainException $e) {
+        } catch (DomainException $e) {
             Yii::$app->session->setFlash('error', $e->getMessage());
         }
         

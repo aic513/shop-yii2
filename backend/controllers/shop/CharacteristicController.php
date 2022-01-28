@@ -3,9 +3,10 @@
 namespace backend\controllers\shop;
 
 use backend\forms\Shop\CharacteristicSearch;
+use DomainException;
 use shop\entities\Shop\Characteristic;
 use shop\forms\manage\Shop\CharacteristicForm;
-use shop\services\manage\Shop\CharacteristicManageService;
+use shop\useCases\manage\Shop\CharacteristicManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
@@ -68,9 +69,9 @@ class CharacteristicController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $characteristic = $this->service->create($form);
-                
+        
                 return $this->redirect(['view', 'id' => $characteristic->id]);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -94,9 +95,9 @@ class CharacteristicController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $this->service->edit($characteristic->id, $form);
-                
+        
                 return $this->redirect(['view', 'id' => $characteristic->id]);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -117,7 +118,7 @@ class CharacteristicController extends Controller
     {
         try {
             $this->service->remove($id);
-        } catch (\DomainException $e) {
+        } catch (DomainException $e) {
             Yii::$app->errorHandler->logException($e);
             Yii::$app->session->setFlash('error', $e->getMessage());
         }

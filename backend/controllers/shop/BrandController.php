@@ -3,9 +3,10 @@
 namespace backend\controllers\shop;
 
 use backend\forms\Shop\BrandSearch;
+use DomainException;
 use shop\entities\Shop\Brand;
 use shop\forms\manage\Shop\BrandForm;
-use shop\services\manage\Shop\BrandManageService;
+use shop\useCases\manage\Shop\BrandManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
@@ -66,14 +67,14 @@ class BrandController extends Controller
 	{
 		$form = new BrandForm();
 		if ($form->load(Yii::$app->request->post()) && $form->validate()) {
-			try {
-				$brand = $this->service->create($form);
-
-				return $this->redirect(['view', 'id' => $brand->id]);
-			} catch (\DomainException $e) {
-				Yii::$app->errorHandler->logException($e);
-				Yii::$app->session->setFlash('error', $e->getMessage());
-			}
+            try {
+                $brand = $this->service->create($form);
+                
+                return $this->redirect(['view', 'id' => $brand->id]);
+            } catch (DomainException $e) {
+                Yii::$app->errorHandler->logException($e);
+                Yii::$app->session->setFlash('error', $e->getMessage());
+            }
 		}
 
 		return $this->render('create', [
@@ -92,14 +93,14 @@ class BrandController extends Controller
 
 		$form = new BrandForm($brand);
 		if ($form->load(Yii::$app->request->post()) && $form->validate()) {
-			try {
-				$this->service->edit($brand->id, $form);
-
-				return $this->redirect(['view', 'id' => $brand->id]);
-			} catch (\DomainException $e) {
-				Yii::$app->errorHandler->logException($e);
-				Yii::$app->session->setFlash('error', $e->getMessage());
-			}
+            try {
+                $this->service->edit($brand->id, $form);
+                
+                return $this->redirect(['view', 'id' => $brand->id]);
+            } catch (DomainException $e) {
+                Yii::$app->errorHandler->logException($e);
+                Yii::$app->session->setFlash('error', $e->getMessage());
+            }
 		}
 
 		return $this->render('update', [
@@ -115,12 +116,12 @@ class BrandController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		try {
-			$this->service->remove($id);
-		} catch (\DomainException $e) {
-			Yii::$app->errorHandler->logException($e);
-			Yii::$app->session->setFlash('error', $e->getMessage());
-		}
+        try {
+            $this->service->remove($id);
+        } catch (DomainException $e) {
+            Yii::$app->errorHandler->logException($e);
+            Yii::$app->session->setFlash('error', $e->getMessage());
+        }
 
 		return $this->redirect(['index']);
 	}

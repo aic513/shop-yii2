@@ -11,7 +11,7 @@ use shop\forms\manage\Shop\Product\PriceForm;
 use shop\forms\manage\Shop\Product\ProductCreateForm;
 use shop\forms\manage\Shop\Product\ProductEditForm;
 use shop\forms\manage\Shop\Product\QuantityForm;
-use shop\services\manage\Shop\ProductManageService;
+use shop\useCases\manage\Shop\ProductManageService;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\filters\VerbFilter;

@@ -6,7 +6,7 @@ use backend\forms\Shop\DeliveryMethodSearch;
 use DomainException;
 use shop\entities\Shop\DeliveryMethod;
 use shop\forms\manage\Shop\DeliveryMethodForm;
-use shop\services\manage\Shop\DeliveryMethodManageService;
+use shop\useCases\manage\Shop\DeliveryMethodManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;

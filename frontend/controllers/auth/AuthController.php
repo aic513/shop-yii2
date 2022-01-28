@@ -4,7 +4,7 @@ namespace frontend\controllers\auth;
 use common\auth\Identity;
 use DomainException;
 use shop\forms\auth\LoginForm;
-use shop\services\auth\AuthService;
+use shop\useCases\auth\AuthService;
 use Yii;
 use yii\web\Controller;
 

@@ -4,7 +4,7 @@ namespace frontend\controllers\auth;
 
 use common\auth\Identity;
 use DomainException;
-use shop\services\auth\NetworkService;
+use shop\useCases\auth\NetworkService;
 use Yii;
 use yii\authclient\AuthAction;
 use yii\authclient\ClientInterface;

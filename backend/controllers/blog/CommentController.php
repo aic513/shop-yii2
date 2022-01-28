@@ -6,7 +6,7 @@ use backend\forms\Blog\CommentSearch;
 use DomainException;
 use shop\entities\Blog\Post\Post;
 use shop\forms\manage\Blog\Post\CommentEditForm;
-use shop\services\manage\Blog\CommentManageService;
+use shop\useCases\manage\Blog\CommentManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;

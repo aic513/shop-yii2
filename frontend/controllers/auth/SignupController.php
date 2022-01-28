@@ -1,8 +1,9 @@
 <?php
 namespace frontend\controllers\auth;
 
+use DomainException;
 use shop\forms\auth\SignupForm;
-use shop\services\auth\SignupService;
+use shop\useCases\auth\SignupService;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -35,7 +36,7 @@ class SignupController extends Controller
             ],
         ];
     }
-
+    
     /**
      * @return mixed
      */
@@ -46,18 +47,19 @@ class SignupController extends Controller
             try {
                 $this->service->signup($form);
                 Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+                
                 return $this->goHome();
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
         }
-
+        
         return $this->render('request', [
             'model' => $form,
         ]);
     }
-
+    
     /**
      * @param $token
      *
@@ -68,11 +70,13 @@ class SignupController extends Controller
         try {
             $this->service->confirm($token);
             Yii::$app->session->setFlash('success', 'Your email is confirmed.');
+            
             return $this->redirect(['auth/auth/login']);
-        } catch (\DomainException $e) {
+        } catch (DomainException $e) {
             Yii::$app->errorHandler->logException($e);
             Yii::$app->session->setFlash('error', $e->getMessage());
         }
+        
         return $this->goHome();
     }
 }

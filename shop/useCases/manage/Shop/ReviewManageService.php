@@ -1,16 +1,16 @@
 <?php
 
-namespace shop\services;
+namespace shop\useCases\manage\Shop;
 
 use shop\forms\manage\Shop\Product\ReviewEditForm;
 use shop\repositories\Shop\ProductRepository;
 
 class ReviewManageService
 {
-	private $products;
-
-	public function __construct(ProductRepository $products)
-	{
+    private $products;
+    
+    public function __construct(ProductRepository $products)
+    {
 		$this->products = $products;
 	}
 

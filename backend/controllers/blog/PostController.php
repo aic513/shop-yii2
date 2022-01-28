@@ -6,7 +6,7 @@ use backend\forms\Blog\PostSearch;
 use DomainException;
 use shop\entities\Blog\Post\Post;
 use shop\forms\manage\Blog\Post\PostForm;
-use shop\services\manage\Blog\PostManageService;
+use shop\useCases\manage\Blog\PostManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;

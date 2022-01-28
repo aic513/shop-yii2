@@ -3,10 +3,11 @@
 namespace backend\controllers;
 
 use backend\forms\UserSearch;
+use DomainException;
 use shop\entities\User\User;
 use shop\forms\manage\User\UserCreateForm;
 use shop\forms\manage\User\UserEditForm;
-use shop\services\manage\UserManageService;
+use shop\useCases\manage\UserManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
@@ -82,8 +83,9 @@ class UserController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $user = $this->service->create($form);
+        
                 return $this->redirect(['view', 'id' => $user->id]);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
@@ -109,8 +111,9 @@ class UserController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
                 $this->service->edit($user->id, $form);
+        
                 return $this->redirect(['view', 'id' => $user->id]);
-            } catch (\DomainException $e) {
+            } catch (DomainException $e) {
                 Yii::$app->errorHandler->logException($e);
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }

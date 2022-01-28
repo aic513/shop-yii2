@@ -3,9 +3,10 @@
 namespace backend\controllers\shop;
 
 use backend\forms\Shop\TagSearch;
+use DomainException;
 use shop\entities\Shop\Tag;
 use shop\forms\manage\Shop\TagForm;
-use shop\services\manage\Shop\TagManageService;
+use shop\useCases\manage\Shop\TagManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
@@ -66,14 +67,14 @@ class TagController extends Controller
 	{
 		$form = new TagForm();
 		if ($form->load(Yii::$app->request->post()) && $form->validate()) {
-			try {
-				$tag = $this->service->create($form);
-
-				return $this->redirect(['view', 'id' => $tag->id]);
-			} catch (\DomainException $e) {
-				Yii::$app->errorHandler->logException($e);
-				Yii::$app->session->setFlash('error', $e->getMessage());
-			}
+            try {
+                $tag = $this->service->create($form);
+                
+                return $this->redirect(['view', 'id' => $tag->id]);
+            } catch (DomainException $e) {
+                Yii::$app->errorHandler->logException($e);
+                Yii::$app->session->setFlash('error', $e->getMessage());
+            }
 		}
 
 		return $this->render('create', [
@@ -92,14 +93,14 @@ class TagController extends Controller
 
 		$form = new TagForm($tag);
 		if ($form->load(Yii::$app->request->post()) && $form->validate()) {
-			try {
-				$this->service->edit($tag->id, $form);
-
-				return $this->redirect(['view', 'id' => $tag->id]);
-			} catch (\DomainException $e) {
-				Yii::$app->errorHandler->logException($e);
-				Yii::$app->session->setFlash('error', $e->getMessage());
-			}
+            try {
+                $this->service->edit($tag->id, $form);
+                
+                return $this->redirect(['view', 'id' => $tag->id]);
+            } catch (DomainException $e) {
+                Yii::$app->errorHandler->logException($e);
+                Yii::$app->session->setFlash('error', $e->getMessage());
+            }
 		}
 
 		return $this->render('update', [
@@ -115,12 +116,12 @@ class TagController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		try {
-			$this->service->remove($id);
-		} catch (\DomainException $e) {
-			Yii::$app->errorHandler->logException($e);
-			Yii::$app->session->setFlash('error', $e->getMessage());
-		}
+        try {
+            $this->service->remove($id);
+        } catch (DomainException $e) {
+            Yii::$app->errorHandler->logException($e);
+            Yii::$app->session->setFlash('error', $e->getMessage());
+        }
 
 		return $this->redirect(['index']);
 	}

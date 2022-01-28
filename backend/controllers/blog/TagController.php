@@ -6,7 +6,7 @@ use backend\forms\Blog\TagSearch;
 use DomainException;
 use shop\entities\Blog\Tag;
 use shop\forms\manage\Blog\TagForm;
-use shop\services\manage\Blog\TagManageService;
+use shop\useCases\manage\Blog\TagManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;

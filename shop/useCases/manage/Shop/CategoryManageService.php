@@ -1,7 +1,8 @@
 <?php
 
-namespace shop\services\manage\Shop;
+namespace shop\useCases\manage\Shop;
 
+use DomainException;
 use shop\entities\Meta;
 use shop\entities\Shop\Category;
 use shop\forms\manage\Shop\CategoryForm;
@@ -87,7 +88,7 @@ class CategoryManageService
         $category = $this->categories->get($id);
         $this->assertIsNotRoot($category);
         if ($this->products->existsByMainCategory($category->id)) {
-            throw new \DomainException('Unable to remove category with products.');
+            throw new DomainException('Unable to remove category with products.');
         }
         $this->categories->remove($category);
     }
@@ -95,7 +96,7 @@ class CategoryManageService
     private function assertIsNotRoot(Category $category): void
     {
         if ($category->isRoot()) {
-            throw new \DomainException('Unable to manage the root category.');
+            throw new DomainException('Unable to manage the root category.');
         }
     }
 }

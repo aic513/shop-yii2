@@ -6,7 +6,7 @@ use backend\forms\Blog\CategorySearch;
 use DomainException;
 use shop\entities\Blog\Category;
 use shop\forms\manage\Blog\CategoryForm;
-use shop\services\manage\Blog\CategoryManageService;
+use shop\useCases\manage\Blog\CategoryManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;

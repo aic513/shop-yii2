@@ -2,7 +2,8 @@
 
 namespace frontend\controllers\cabinet;
 
-use shop\services\auth\NetworkService;
+use DomainException;
+use shop\useCases\auth\NetworkService;
 use Yii;
 use yii\authclient\AuthAction;
 use yii\authclient\ClientInterface;
@@ -36,11 +37,11 @@ class NetworkController extends Controller
         $network = $client->getId();
         $attributes = $client->getUserAttributes();
         $identity = ArrayHelper::getValue($attributes, 'id');
-
+    
         try {
             $this->service->attach(Yii::$app->user->id, $network, $identity);
             Yii::$app->session->setFlash('success', 'Network is successfully attached.');
-        } catch (\DomainException $e) {
+        } catch (DomainException $e) {
             Yii::$app->errorHandler->logException($e);
             Yii::$app->session->setFlash('error', $e->getMessage());
         }

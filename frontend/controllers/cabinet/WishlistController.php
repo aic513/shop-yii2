@@ -4,7 +4,7 @@ namespace frontend\controllers\cabinet;
 
 use DomainException;
 use shop\readModels\Shop\ProductReadRepository;
-use shop\services\cabinet\WishlistService;
+use shop\useCases\cabinet\WishlistService;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;

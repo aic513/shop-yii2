@@ -1,6 +1,6 @@
 <?php
 
-namespace shop\services\auth;
+namespace shop\useCases\auth;
 
 use DomainException;
 use RuntimeException;

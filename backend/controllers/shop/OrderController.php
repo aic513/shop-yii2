@@ -9,7 +9,7 @@ use PHPExcel_IOFactory;
 use shop\entities\Shop\Order\Order;
 use shop\forms\manage\Shop\Order\OrderEditForm;
 use shop\forms\manage\Shop\OrderForm;
-use shop\services\manage\Shop\OrderManageService;
+use shop\useCases\manage\Shop\OrderManageService;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\Controller;

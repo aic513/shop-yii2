@@ -1,6 +1,6 @@
 <?php
 
-namespace shop\services\manage\Shop;
+namespace shop\useCases\manage\Shop;
 
 use shop\entities\Shop\Characteristic;
 use shop\forms\manage\Shop\CharacteristicForm;
@@ -8,9 +8,9 @@ use shop\repositories\Shop\CharacteristicRepository;
 
 class CharacteristicManageService
 {
-	private $characteristics;
-
-	public function __construct(CharacteristicRepository $characteristics)
+    private $characteristics;
+    
+    public function __construct(CharacteristicRepository $characteristics)
 	{
 		$this->characteristics = $characteristics;
 	}
