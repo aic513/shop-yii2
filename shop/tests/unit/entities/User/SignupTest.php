@@ -12,11 +12,13 @@ class SignupTest extends Unit
         $user = User::requestSignup(
             $username = 'username',
             $email = 'email@site.com',
-            $password = 'password'
+            $password = 'password',
+            $phone = '70000000000',
         );
 
         $this->assertEquals($username, $user->username);
         $this->assertEquals($email, $user->email);
+        $this->assertEquals($phone, $user->phone);
         $this->assertNotEmpty($user->password_hash);
         $this->assertNotEquals($password, $user->password_hash);
         $this->assertNotEmpty($user->created_at);
