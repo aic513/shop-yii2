@@ -11,4 +11,6 @@ return [
     'backendHostInfo' => 'http://backend.shop.test',
     'staticHostInfo' => 'http://static.shop.test',
     'staticPath' => dirname(__DIR__, 2) . '/static',
+    'mailChimpKey' => '',
+    'mailChimpListId' => '',
 ];

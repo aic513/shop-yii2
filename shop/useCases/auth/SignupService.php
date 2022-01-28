@@ -8,6 +8,7 @@ use shop\access\Rbac;
 use shop\entities\User\User;
 use shop\forms\auth\SignupForm;
 use shop\repositories\UserRepository;
+use shop\services\newsletter\Newsletter;
 use shop\services\RoleManager;
 use shop\services\TransactionManager;
 use Yii;
@@ -23,16 +24,20 @@ class SignupService
     
     private $transaction;
     
+    private $newsletter;
+    
     public function __construct(
         UserRepository $users,
         MailerInterface $mailer,
         RoleManager $roles,
-        TransactionManager $transaction
+        TransactionManager $transaction,
+        Newsletter $newsletter
     ) {
         $this->mailer = $mailer;
         $this->users = $users;
         $this->roles = $roles;
         $this->transaction = $transaction;
+        $this->newsletter = $newsletter;
     }
     
     public function signup(SignupForm $form): void
@@ -45,6 +50,7 @@ class SignupService
         
         $this->transaction->wrap(function () use ($user) {
             $this->users->save($user);
+            $this->newsletter->subscribe($user->email);
             $this->roles->assign($user->id, Rbac::ROLE_USER);
         });
         
