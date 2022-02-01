@@ -48,6 +48,9 @@ sudo systemctl start elasticsearch.service
 info "Install Redis"
 apt-get install -y redis-server
 
+info "Install Supervisor"
+apt-get install -y supervisor
+
 info "Install additional software"
 apt-get install -y php7.4-curl php7.4-cli php7.4-intl php7.4-mysqlnd php7.4-gd php7.4-fpm php7.4-mbstring php7.4-xml php7.4-zip unzip nginx mysql-server-5.7 php7.4-xdebug
 
@@ -87,6 +90,10 @@ echo "Done!"
 info "Initailize databases for MySQL"
 mysql -uroot <<<"CREATE DATABASE shop"
 mysql -uroot <<<"CREATE DATABASE shop_test"
+echo "Done!"
+
+info "Enabling supervisor processes"
+ln -s /app/vagrant/supervisor/queue.conf /etc/supervisor/conf.d/queue.conf
 echo "Done!"
 
 info "Install composer"

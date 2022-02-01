@@ -12,3 +12,4 @@ service nginx restart
 service mysql restart
 sudo service elasticsearch restart
 service redis restart
+service supervisor restart
