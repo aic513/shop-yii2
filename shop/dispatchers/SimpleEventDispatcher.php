@@ -27,6 +27,13 @@ class SimpleEventDispatcher implements EventDispatcher
         }
     }
     
+    public function dispatchAll(array $events): void
+    {
+        foreach ($events as $event) {
+            $this->dispatch($event);
+        }
+    }
+    
     private function resolveListener($listenerClass): callable
     {
         return [$this->container->get($listenerClass), 'handle'];

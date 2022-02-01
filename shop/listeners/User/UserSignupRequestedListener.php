@@ -3,7 +3,7 @@
 namespace shop\listeners\User;
 
 use RuntimeException;
-use shop\useCases\auth\events\UserSignUpRequested;
+use shop\entities\User\events\UserSignUpRequested;
 use yii\mail\MailerInterface;
 
 class UserSignupRequestedListener
