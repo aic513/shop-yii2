@@ -4,10 +4,13 @@ namespace shop\entities\Shop\Product;
 
 use DomainException;
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
+use shop\entities\AggregateRoot;
 use shop\entities\behaviors\MetaBehavior;
+use shop\entities\EventTrait;
 use shop\entities\Meta;
 use shop\entities\Shop\Brand;
 use shop\entities\Shop\Category;
+use shop\entities\Shop\Product\events\ProductAppearedInStock;
 use shop\entities\Shop\queries\ProductQuery;
 use shop\entities\Shop\Tag;
 use shop\entities\User\WishlistItem;
@@ -45,8 +48,10 @@ use yii\web\UploadedFile;
  * @property Photo                $mainPhoto
  * @property Review[]             $reviews
  */
-class Product extends ActiveRecord
+class Product extends ActiveRecord implements AggregateRoot
 {
+    use EventTrait;
+    
     const STATUS_DRAFT = 0;
     const STATUS_ACTIVE = 1;
     
@@ -75,12 +80,12 @@ class Product extends ActiveRecord
         $this->price_old = $old;
     }
     
-    public function setQuantity($quantity): void
+    public function changeQuantity($quantity): void
     {
         if ($this->modifications) {
             throw new DomainException('Change modifications quantity.');
         }
-        $this->quantity = $quantity;
+        $this->setQuantity($quantity);
     }
     
     public function edit($brandId, $code, $name, $description, $weight, Meta $meta): void
@@ -151,7 +156,7 @@ class Product extends ActiveRecord
                 if ($modification->isIdEqualTo($modificationId)) {
                     $modification->checkout($quantity);
                     $this->updateModifications($modifications);
-                    
+    
                     return;
                 }
             }
@@ -159,7 +164,15 @@ class Product extends ActiveRecord
         if ($quantity > $this->quantity) {
             throw new DomainException('Only ' . $this->quantity . ' items are available.');
         }
-        $this->quantity -= $quantity;
+        $this->setQuantity($this->quantity - $quantity);
+    }
+    
+    private function setQuantity($quantity): void
+    {
+        if ($this->quantity == 0 && $quantity > 0) {
+            $this->recordEvent(new ProductAppearedInStock($this));
+        }
+        $this->quantity = $quantity;
     }
     
     public function getSeoTitle(): string
@@ -239,6 +252,7 @@ class Product extends ActiveRecord
                 return;
             }
         }
+        throw new DomainException('Modification is not found.');
     }
     
     public function removeModification($id): void
@@ -258,9 +272,9 @@ class Product extends ActiveRecord
     private function updateModifications(array $modifications): void
     {
         $this->modifications = $modifications;
-        $this->quantity = array_sum(array_map(function (Modification $modification) {
+        $this->setQuantity(array_sum(array_map(function (Modification $modification) {
             return $modification->quantity;
-        }, $this->modifications));
+        }, $this->modifications)));
     }
     
     // Categories

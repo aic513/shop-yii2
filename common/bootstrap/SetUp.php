@@ -11,8 +11,10 @@ use shop\cart\storage\HybridStorage;
 use shop\dispatchers\DeferredEventDispatcher;
 use shop\dispatchers\EventDispatcher;
 use shop\dispatchers\SimpleEventDispatcher;
+use shop\entities\Shop\Product\events\ProductAppearedInStock;
 use shop\entities\User\events\UserSignUpConfirmed;
 use shop\entities\User\events\UserSignUpRequested;
+use shop\listeners\Shop\Product\ProductAppearedInStockListener;
 use shop\listeners\User\UserSignupConfirmedListener;
 use shop\listeners\User\UserSignupRequestedListener;
 use shop\services\newsletter\MailChimp;
@@ -22,9 +24,10 @@ use shop\services\sms\SmsRu;
 use shop\services\sms\SmsSender;
 use shop\services\yandex\ShopInfo;
 use shop\services\yandex\YandexMarket;
-use shop\useCases\ContactService;
+use shop\useCases\contact\ContactService;
 use Yii;
 use yii\base\BootstrapInterface;
+use yii\base\ErrorHandler;
 use yii\caching\Cache;
 use yii\di\Container;
 use yii\mail\MailerInterface;
@@ -44,6 +47,10 @@ class SetUp implements BootstrapInterface
             return $app->mailer;
         });
     
+        $container->setSingleton(ErrorHandler::class, function () use ($app) {
+            return $app->errorHandler;
+        });
+    
         $container->setSingleton(Cache::class, function () use ($app) {
             return $app->cache;
         });
@@ -51,7 +58,7 @@ class SetUp implements BootstrapInterface
         $container->setSingleton(ManagerInterface::class, function () use ($app) {
             return $app->authManager;
         });
-        
+    
         $container->setSingleton(ContactService::class, [], [
             $app->params['adminEmail']
         ]);
@@ -87,6 +94,7 @@ class SetUp implements BootstrapInterface
             return new DeferredEventDispatcher(new SimpleEventDispatcher($container, [
                 UserSignUpRequested::class => [UserSignupRequestedListener::class],
                 UserSignUpConfirmed::class => [UserSignupConfirmedListener::class],
+                ProductAppearedInStock::class => [ProductAppearedInStockListener::class],
             ]));
         });
     }
