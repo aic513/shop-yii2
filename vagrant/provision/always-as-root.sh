@@ -11,3 +11,4 @@ service php7.4-fpm restart
 service nginx restart
 service mysql restart
 sudo service elasticsearch restart
+service redis restart
