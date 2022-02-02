@@ -10,11 +10,14 @@ use yii\db\ActiveRecord;
  * @property string  $name
  * @property string  $from_date
  * @property string  $to_date
- * @property bool    $active
+ * @property bool    $status
  * @property integer $sort
  */
 class Discount extends ActiveRecord
 {
+    const STATUS_DRAFT = 0;
+    const STATUS_ACTIVE = 1;
+    
     public static function create($percent, $name, $fromDate, $toDate, $sort): self
     {
         $discount = new static();
@@ -23,7 +26,7 @@ class Discount extends ActiveRecord
         $discount->from_date = $fromDate;
         $discount->to_date = $toDate;
         $discount->sort = $sort;
-        $discount->active = true;
+        $discount->status = self::STATUS_ACTIVE;
         
         return $discount;
     }
@@ -39,12 +42,17 @@ class Discount extends ActiveRecord
     
     public function activate(): void
     {
-        $this->active = true;
+        $this->status = true;
     }
     
     public function draft(): void
     {
-        $this->active = false;
+        $this->status = false;
+    }
+    
+    public function isActive(): bool
+    {
+        return $this->status == self::STATUS_ACTIVE;
     }
     
     public function isEnabled(): bool

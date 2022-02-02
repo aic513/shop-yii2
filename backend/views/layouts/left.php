@@ -77,6 +77,12 @@
                                 'url' => ['/shop/delivery/index'],
                                 'active' => $this->context->id == 'shop/delivery'
                             ],
+                            [
+                                'label' => 'Discounts',
+                                'icon' => 'file-o',
+                                'url' => ['/shop/discount/index'],
+                                'active' => $this->context->id == 'shop/discount'
+                            ],
 
                         ]
                     ],

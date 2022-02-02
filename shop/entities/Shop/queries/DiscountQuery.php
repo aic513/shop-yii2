@@ -8,6 +8,6 @@ class DiscountQuery extends ActiveQuery
 {
     public function active()
     {
-        return $this->andWhere(['active' => true]);
+        return $this->andWhere(['status' => true]);
     }
 }
