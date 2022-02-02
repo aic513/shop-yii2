@@ -8,12 +8,14 @@ use shop\cart\Cart;
 use shop\cart\cost\calculator\DynamicCost;
 use shop\cart\cost\calculator\SimpleCost;
 use shop\cart\storage\HybridStorage;
+use shop\dispatchers\AsyncEventDispatcher;
 use shop\dispatchers\DeferredEventDispatcher;
 use shop\dispatchers\EventDispatcher;
 use shop\dispatchers\SimpleEventDispatcher;
 use shop\entities\Shop\Product\events\ProductAppearedInStock;
 use shop\entities\User\events\UserSignUpConfirmed;
 use shop\entities\User\events\UserSignUpRequested;
+use shop\jobs\AsyncEventJobHandler;
 use shop\listeners\Shop\Product\ProductAppearedInStockListener;
 use shop\listeners\User\UserSignupConfirmedListener;
 use shop\listeners\User\UserSignupRequestedListener;
@@ -30,6 +32,7 @@ use yii\base\BootstrapInterface;
 use yii\base\ErrorHandler;
 use yii\caching\Cache;
 use yii\di\Container;
+use yii\di\Instance;
 use yii\mail\MailerInterface;
 use yii\queue\Queue;
 use yii\rbac\ManagerInterface;
@@ -52,12 +55,12 @@ class SetUp implements BootstrapInterface
             return $app->errorHandler;
         });
     
-        $container->setSingleton(Cache::class, function () use ($app) {
-            return $app->cache;
-        });
-    
         $container->setSingleton(Queue::class, function () use ($app) {
             return $app->get('queue');
+        });
+    
+        $container->setSingleton(Cache::class, function () use ($app) {
+            return $app->cache;
         });
     
         $container->setSingleton(ManagerInterface::class, function () use ($app) {
@@ -96,11 +99,19 @@ class SetUp implements BootstrapInterface
         $container->setSingleton(EventDispatcher::class, DeferredEventDispatcher::class);
     
         $container->setSingleton(DeferredEventDispatcher::class, function (Container $container) {
-            return new DeferredEventDispatcher(new SimpleEventDispatcher($container, [
+            return new DeferredEventDispatcher(new AsyncEventDispatcher($container->get(Queue::class)));
+        });
+    
+        $container->setSingleton(SimpleEventDispatcher::class, function (Container $container) {
+            return new SimpleEventDispatcher($container, [
                 UserSignUpRequested::class => [UserSignupRequestedListener::class],
                 UserSignUpConfirmed::class => [UserSignupConfirmedListener::class],
                 ProductAppearedInStock::class => [ProductAppearedInStockListener::class],
-            ]));
+            ]);
         });
+    
+        $container->setSingleton(AsyncEventJobHandler::class, [], [
+            Instance::of(SimpleEventDispatcher::class)
+        ]);
     }
 }
