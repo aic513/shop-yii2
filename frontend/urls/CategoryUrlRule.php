@@ -7,6 +7,7 @@ use shop\readModels\Shop\CategoryReadRepository;
 use yii\base\BaseObject;
 use yii\base\InvalidArgumentException;
 use yii\caching\Cache;
+use yii\caching\TagDependency;
 use yii\helpers\ArrayHelper;
 use yii\web\UrlNormalizerRedirectException;
 use yii\web\UrlRuleInterface;
@@ -30,14 +31,14 @@ class CategoryUrlRule extends BaseObject implements UrlRuleInterface
     {
         if (preg_match('#^' . $this->prefix . '/(.*[a-z])$#is', $request->pathInfo, $matches)) {
             $path = $matches['1'];
-            
+    
             $result = $this->cache->getOrSet(['category_route', 'path' => $path], function () use ($path) {
                 if (!$category = $this->repository->findBySlug($this->getPathSlug($path))) {
                     return ['id' => null, 'path' => null];
                 }
-                
+        
                 return ['id' => $category->id, 'path' => $this->getCategoryPath($category)];
-            });
+            }, null, new TagDependency(['tags' => ['categories']]));
             
             if (empty($result['id'])) {
                 return false;
@@ -67,7 +68,7 @@ class CategoryUrlRule extends BaseObject implements UrlRuleInterface
                 }
         
                 return $this->getCategoryPath($category);
-            });
+            }, null, new TagDependency(['tags' => ['categories']]));
     
             if (!$url) {
                 throw new InvalidArgumentException('Undefined id.');
