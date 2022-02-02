@@ -4,14 +4,13 @@ namespace shop\listeners\Shop\Product;
 
 use shop\entities\Shop\Product\events\ProductAppearedInStock;
 use shop\jobs\Shop\Product\ProductAvailabilityNotification;
-use shop\repositories\UserRepository;
 use yii\queue\Queue;
 
 class ProductAppearedInStockListener
 {
     private $queue;
     
-    public function __construct(UserRepository $users, Queue $queue)
+    public function __construct(Queue $queue)
     {
         $this->queue = $queue;
     }
